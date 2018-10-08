@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+
+using System.Windows.Forms;
+using YiKang.RBACS.DataObjects;
+using System.Collections.Generic;
+using DevExpress.XtraGrid.Views.Base;
+using Hwagain.Components;
+using Hwagain.SalaryCalculation.Components;
+using YiKang;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.Utils;
+
+
+namespace Hwagain.SalaryCalculation.Backup
+{
+    public partial class PublicPayReportForm : XtraForm
+    {
+        protected bool isCheckInput = false; //是否验证录入
+        protected List<SalaryResult> currRows = new List<SalaryResult>();
+        protected PersonPayRateInput currPersonPayRate = null;//当前记录
+
+        public PublicPayReportForm(bool isCheck) 
+            : this()
+        {
+            isCheckInput = isCheck;
+        }
+
+        public PublicPayReportForm()
+        {
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
+
+            // TODO: Add any initialization after the InitializeComponent call
+        }
+
+        #region CreateWaitDialog
+
+        WaitDialogForm dlg = null;
+        public void CreateWaitDialog()
+        {
+            CreateWaitDialog("正在启动...", "请稍等...");
+        }
+        public void CreateWaitDialog(string caption, string title, Size size)
+        {
+            CloseWaitDialog();
+            dlg = new DevExpress.Utils.WaitDialogForm(caption, title, size);
+        }
+        public void CreateWaitDialog(string caption, string title)
+        {
+            CloseWaitDialog();
+            dlg = new DevExpress.Utils.WaitDialogForm(caption, title);
+        }
+        public void SetWaitDialogCaption(string fCaption)
+        {
+            if (dlg != null)
+                dlg.Caption = fCaption;
+        }
+        public void CloseWaitDialog()
+        {
+            if (dlg != null)
+                dlg.Close();
+        }
+        #endregion
+
+        private void EditPersonPayRateForm_Load(object sender, EventArgs e)
+        {
+            this.Text = "个人职级工资录入 - " + (this.是验证录入 ? "验证录入" : "初次录入");
+
+            DateTime end = DateTime.Today;
+            DateTime start = end.AddYears(-1);
+            foreach (CalRunInfo group in CalRunInfo.GetList(start, end))
+            {
+                ImageComboBoxItem  item = new ImageComboBoxItem((string)group.日历组名称, group.日历组编号);
+                imageComboBoxEdit1.Properties.Items.Add(item);
+            }
+            LoadData();
+        }
+
+        #region 加载数据
+
+        protected void LoadData()
+        {
+            CreateWaitDialog("正在查询...", "请稍等");
+            //清除原来的数据
+            currRows = SalaryResult.GetSalaryResults((string)imageComboBoxEdit1.EditValue);
+            
+            CreateWaitDialog("正在加载...", "请稍等");
+
+            gridControl1.DataSource = currRows;
+            gridControl1.RefreshDataSource();
+
+            CloseWaitDialog();
+        }
+
+        #endregion
+
+        #region 是验证录入
+
+        public bool 是验证录入
+        {
+            get
+            {
+                return isCheckInput;
+            }
+            set
+            {
+                isCheckInput = value;
+            }
+        }
+        #endregion
+
+        #region btn查询_Click
+
+        private void btn查询_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        #endregion
+    }
+
+}
+

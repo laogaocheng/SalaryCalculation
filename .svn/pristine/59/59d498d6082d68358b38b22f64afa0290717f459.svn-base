@@ -1,0 +1,2848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99FAC269-D907-4130-8EC6-C61F34B2A2DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hwagain.SalaryCalculation.Components</RootNamespace>
+    <AssemblyName>SalaryCalculation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>3</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://10.0.205.31/SalaryCalculation/</InstallUrl>
+    <TargetCulture>zh-Hans</TargetCulture>
+    <ProductName>专用算薪模块</ProductName>
+    <PublisherName>华劲集团股份有限公司</PublisherName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>435</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>http://192.168.68.208/Download/DotNetFX40/dotNetFx40LP_Full_x86_x64zh-Hans.exe</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Hwagain.SalaryCalculation.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1FFAC16E8340C360FF04CE996E4D6525169F4338</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>专用算薪系统_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>__TemplateIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Aspose.Cells">
+      <HintPath>I:\DLL\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackHen.Threading">
+      <HintPath>I:\DLL\BlackHen.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoHelper">
+      <HintPath>I:\DLL\CryptoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hwagain.CommLib">
+      <HintPath>I:\DLL\Hwagain.CommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>I:\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\类库\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\类库\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\类库\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\类库\office.dll</HintPath>
+    </Reference>
+    <Reference Include="SSO">
+      <HintPath>I:\DLL\SSO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="YiKang.RBACS">
+      <HintPath>I:\DLL\YiKang.RBACS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backup\PublicPayReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\PublicPayReportForm.Designer.cs">
+      <DependentUpon>PublicPayReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DeveloperConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\DeveloperConfig.Designer.cs">
+      <DependentUpon>DeveloperConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FrmFrameBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ModuleBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Modules.cs" />
+    <Compile Include="Common\NotePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVR\CVRSDK.cs" />
+    <Compile Include="CVR\IdentificationData.cs" />
+    <Compile Include="CVR\IdReaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CVR\IdReaderForm.Designer.cs">
+      <DependentUpon>IdReaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdjustPersonPayRateOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdjustPersonPayRateOrderForm.Designer.cs">
+      <DependentUpon>AdjustPersonPayRateOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseDataManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseDataManageForm.Designer.cs">
+      <DependentUpon>BaseDataManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\DatabaseConfig.Designer.cs">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\SalaryDecuctionInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\SalaryDecuctionInfoForm.Designer.cs">
+      <DependentUpon>SalaryDecuctionInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditReimbursementStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditReimbursementStandardForm.Designer.cs">
+      <DependentUpon>EditReimbursementStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditReimbursementStandardForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditReimbursementStandardForm4Check.Designer.cs">
+      <DependentUpon>EditReimbursementStandardForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPerformanceSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPerformanceSalaryForm.Designer.cs">
+      <DependentUpon>EditPerformanceSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPerformanceSalaryForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPerformanceSalaryForm4Check.Designer.cs">
+      <DependentUpon>EditPerformanceSalaryForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonReimbursementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonReimbursementForm.Designer.cs">
+      <DependentUpon>EditPersonReimbursementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonReimbursementForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonReimbursementForm4Check.Designer.cs">
+      <DependentUpon>EditPersonReimbursementForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEffectivePerformanceSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEffectivePerformanceSalaryForm.Designer.cs">
+      <DependentUpon>EditEffectivePerformanceSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEffectivePerformanceSalaryForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEffectivePerformanceSalaryForm4Check.Designer.cs">
+      <DependentUpon>EditEffectivePerformanceSalaryForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonBorrowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonBorrowForm.Designer.cs">
+      <DependentUpon>EditPersonBorrowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonBorrowForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonBorrowForm4Check.Designer.cs">
+      <DependentUpon>EditPersonBorrowForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeQueryPowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeQueryPowerForm.Designer.cs">
+      <DependentUpon>EditEmployeeQueryPowerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeQueryPowerForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeQueryPowerForm4Check.Designer.cs">
+      <DependentUpon>EditEmployeeQueryPowerForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditAuthorizeComputerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditAuthorizeComputerForm.Designer.cs">
+      <DependentUpon>EditAuthorizeComputerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditGradeSalaryStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditGradeSalaryStandardForm.Designer.cs">
+      <DependentUpon>EditGradeSalaryStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditJobGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditJobGradeForm.Designer.cs">
+      <DependentUpon>EditJobGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportEmpPayRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportEmpPayRateForm.Designer.cs">
+      <DependentUpon>ImportEmpPayRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmpPayRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmpPayRateForm.Designer.cs">
+      <DependentUpon>EmpPayRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportOtherMoneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportOtherMoneyForm.Designer.cs">
+      <DependentUpon>ImportOtherMoneyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexForms\FunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexForms\FunctionForm.Designer.cs">
+      <DependentUpon>FunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectCompanyForm.Designer.cs">
+      <DependentUpon>SelectCompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectInputTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectInputTypeDialog.Designer.cs">
+      <DependentUpon>SelectInputTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectJobGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexForms\SelectJobGradeForm.Designer.cs">
+      <DependentUpon>SelectJobGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelConfigForm.Designer.cs">
+      <DependentUpon>LevelConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustGradeSalaryStandardByIncreaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustGradeSalaryStandardByIncreaseForm.Designer.cs">
+      <DependentUpon>AdjustGradeSalaryStandardByIncreaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\EditEmployeeQueryPowerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\EditEmployeeQueryPowerForm.Designer.cs">
+      <DependentUpon>EditEmployeeQueryPowerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\GradeSalaryStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\GradeSalaryStandardForm.Designer.cs">
+      <DependentUpon>GradeSalaryStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonRepaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonRepaymentList.Designer.cs">
+      <DependentUpon>PersonRepaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\ReimbursementStandardList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\ReimbursementStandardList.Designer.cs">
+      <DependentUpon>ReimbursementStandardList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PerformanceSalaryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PerformanceSalaryList.Designer.cs">
+      <DependentUpon>PerformanceSalaryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonReimbursementList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonReimbursementList.Designer.cs">
+      <DependentUpon>PersonReimbursementList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\EffectivePerformanceSalaryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\EffectivePerformanceSalaryList.Designer.cs">
+      <DependentUpon>EffectivePerformanceSalaryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonBorrowList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonBorrowList.Designer.cs">
+      <DependentUpon>PersonBorrowList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\SalaryChangedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\SalaryChangedList.Designer.cs">
+      <DependentUpon>SalaryChangedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PayChangedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PayChangedList.Designer.cs">
+      <DependentUpon>PayChangedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\SalaryAdjustDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\SalaryAdjustDetail.Designer.cs">
+      <DependentUpon>SalaryAdjustDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\NormalSalaryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\NormalSalaryList.Designer.cs">
+      <DependentUpon>NormalSalaryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustGradeSalaryStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustGradeSalaryStandardForm.Designer.cs">
+      <DependentUpon>AdjustGradeSalaryStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustMonthlySalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\AdjustMonthlySalaryForm.Designer.cs">
+      <DependentUpon>AdjustMonthlySalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\MonthlySalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\MonthlySalaryForm.Designer.cs">
+      <DependentUpon>MonthlySalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\IndividualAdjustMonthlySalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\IndividualAdjustMonthlySalaryForm.Designer.cs">
+      <DependentUpon>IndividualAdjustMonthlySalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManageDeptSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageDeptSystem.Designer.cs">
+      <DependentUpon>ManageDeptSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\IndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\IndexForm.Designer.cs">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate51Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate51Form.Designer.cs">
+      <DependentUpon>RiseRate51Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate52Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate52Form.Designer.cs">
+      <DependentUpon>RiseRate52Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate53Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate53Form.Designer.cs">
+      <DependentUpon>RiseRate53Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate71Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate71Form.Designer.cs">
+      <DependentUpon>RiseRate71Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate72Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate72Form.Designer.cs">
+      <DependentUpon>RiseRate72Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineePersonalAbilityListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineePersonalAbilityListForm.Designer.cs">
+      <DependentUpon>TraineePersonalAbilityListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsFirstYearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsFirstYearForm.Designer.cs">
+      <DependentUpon>TraineeMonthlySalaryItemsFirstYearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineePersonalSalaryPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineePersonalSalaryPlanForm.Designer.cs">
+      <DependentUpon>TraineePersonalSalaryPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeSalaryStandardInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeSalaryStandardInputForm.Designer.cs">
+      <DependentUpon>TraineeSalaryStandardInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeFunctionForm.Designer.cs">
+      <DependentUpon>TraineeFunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate52InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate52InputForm.Designer.cs">
+      <DependentUpon>RiseRate52InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate51InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate51InputForm.Designer.cs">
+      <DependentUpon>RiseRate51InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate71InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate71InputForm.Designer.cs">
+      <DependentUpon>RiseRate71InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate53InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate53InputForm.Designer.cs">
+      <DependentUpon>RiseRate53InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate72InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\RiseRate72InputForm.Designer.cs">
+      <DependentUpon>RiseRate72InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\SelectTraineeTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\SelectTraineeTypeForm.Designer.cs">
+      <DependentUpon>SelectTraineeTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\SpecialtyPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\SpecialtyPropertyForm.Designer.cs">
+      <DependentUpon>SpecialtyPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeAnnualAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeAnnualAssessmentForm.Designer.cs">
+      <DependentUpon>TraineeAnnualAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeSalaryPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeSalaryPlanForm.Designer.cs">
+      <DependentUpon>TraineeSalaryPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsForm.Designer.cs">
+      <DependentUpon>TraineeMonthlySalaryItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryCalculatorForm.Designer.cs">
+      <DependentUpon>TraineeMonthlySalaryCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorFirstYearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorFirstYearForm.Designer.cs">
+      <DependentUpon>TraineeYearlySalaryCalculatorFirstYearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorForm.Designer.cs">
+      <DependentUpon>TraineeYearlySalaryCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagementTraineeForms\TraineeInfoForm.Designer.cs">
+      <DependentUpon>TraineeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\Last5YearMonthlySalaryStandardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\Last5YearMonthlySalaryStandardForm.Designer.cs">
+      <DependentUpon>Last5YearMonthlySalaryStandardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditContractAllowanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditContractAllowanceForm.Designer.cs">
+      <DependentUpon>EditContractAllowanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditContractAllowanceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditContractAllowanceListForm.Designer.cs">
+      <DependentUpon>EditContractAllowanceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\MyMonthlyWageLoanItemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\MyMonthlyWageLoanItemListForm.Designer.cs">
+      <DependentUpon>MyMonthlyWageLoanItemListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyWageLoanItemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyWageLoanItemListForm.Designer.cs">
+      <DependentUpon>EditMonthlyWageLoanItemListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyWageLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyWageLoanForm.Designer.cs">
+      <DependentUpon>EditMonthlyWageLoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditRembursementSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditRembursementSalaryForm.Designer.cs">
+      <DependentUpon>EditRembursementSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryForm.Designer.cs">
+      <DependentUpon>EditMonthlyRembursementSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryItemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryItemListForm.Designer.cs">
+      <DependentUpon>EditMonthlyRembursementSalaryItemListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\MyRembursementSalaryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\MyRembursementSalaryListForm.Designer.cs">
+      <DependentUpon>MyRembursementSalaryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\RembursementSalaryCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\RembursementSalaryCalculatorForm.Designer.cs">
+      <DependentUpon>RembursementSalaryCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\RembursementSalaryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\RembursementSalaryListForm.Designer.cs">
+      <DependentUpon>RembursementSalaryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryDetailListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryDetailListForm.Designer.cs">
+      <DependentUpon>SalaryDetailListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchRembursementSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchRembursementSalaryForm.Designer.cs">
+      <DependentUpon>SearchRembursementSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryStructureListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryStructureListForm.Designer.cs">
+      <DependentUpon>SalaryStructureListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\ContractAllowanceCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\ContractAllowanceCalculatorForm.Designer.cs">
+      <DependentUpon>ContractAllowanceCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SalaryDetailForm.Designer.cs">
+      <DependentUpon>SalaryDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\WageLoanCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\WageLoanCalculatorForm.Designer.cs">
+      <DependentUpon>WageLoanCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchWageLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchWageLoanForm.Designer.cs">
+      <DependentUpon>SearchWageLoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchSalaryStructureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\SearchSalaryStructureForm.Designer.cs">
+      <DependentUpon>SearchSalaryStructureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditWageLoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditWageLoanForm.Designer.cs">
+      <DependentUpon>EditWageLoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditSalaryStructureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditSalaryStructureForm.Designer.cs">
+      <DependentUpon>EditSalaryStructureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditRembursementSalaryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditRembursementSalaryListForm.Designer.cs">
+      <DependentUpon>EditRembursementSalaryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditWageLoanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditWageLoanListForm.Designer.cs">
+      <DependentUpon>EditWageLoanListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditSalaryStructureListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStructureForms\EditSalaryStructureListForm.Designer.cs">
+      <DependentUpon>EditSalaryStructureListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryTreeForm.Designer.cs">
+      <DependentUpon>SalaryTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeePickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeePickerForm.Designer.cs">
+      <DependentUpon>EmployeePickerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchEmployeeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchEmployeeInfoForm.Designer.cs">
+      <DependentUpon>SearchEmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherMoneyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherMoneyForm.Designer.cs">
+      <DependentUpon>OtherMoneyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrivateSalaryTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrivateSalaryTreeView.Designer.cs">
+      <DependentUpon>PrivateSalaryTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeSalaryStepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeSalaryStepForm.Designer.cs">
+      <DependentUpon>EditEmployeeSalaryStepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeSalaryStepForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditEmployeeSalaryStepForm4Check.Designer.cs">
+      <DependentUpon>EditEmployeeSalaryStepForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\EmployeeSalaryStepList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\EmployeeSalaryStepList.Designer.cs">
+      <DependentUpon>EmployeeSalaryStepList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QueryEmployeePayInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QueryEmployeePayInfoForm.Designer.cs">
+      <DependentUpon>QueryEmployeePayInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParameters.cs" />
+    <Compile Include="RBACS\ManageLevelImpowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageLevelImpowers.Designer.cs">
+      <DependentUpon>ManageLevelImpowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\RoleLevelSettingsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\RoleLevelSettingsForm.Designer.cs">
+      <DependentUpon>RoleLevelSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\RoleFunctionSettingsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\RoleFunctionSettingsForm.Designer.cs">
+      <DependentUpon>RoleFunctionSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\RolePaygroupSettingsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\RolePaygroupSettingsForm.Designer.cs">
+      <DependentUpon>RolePaygroupSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DrillDownItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DrillDownItemsForm.Designer.cs">
+      <DependentUpon>DrillDownItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayReportForm.Designer.cs">
+      <DependentUpon>PayReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PublicPayCategoryDetailReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PublicPayCategoryDetailReportForm.Designer.cs">
+      <DependentUpon>PublicPayCategoryDetailReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PublicPayReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PublicPayReportForm.Designer.cs">
+      <DependentUpon>PublicPayReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonPayRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonPayRateForm.Designer.cs">
+      <DependentUpon>EditPersonPayRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StepPayRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StepPayRateView.Designer.cs">
+      <DependentUpon>StepPayRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PayRateInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PayRateInputForm.Designer.cs">
+      <DependentUpon>PayRateInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryStandardTreeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryStandardTreeList.Designer.cs">
+      <DependentUpon>SalaryStandardTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SystemManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemManageForm.Designer.cs">
+      <DependentUpon>SystemManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonPayRateList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForms\PersonPayRateList.Designer.cs">
+      <DependentUpon>PersonPayRateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonPayRateForm4Check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditForms\EditPersonPayRateForm4Check.Designer.cs">
+      <DependentUpon>EditPersonPayRateForm4Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SalaryPlanTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SalaryPlanTree.Designer.cs">
+      <DependentUpon>SalaryPlanTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\System\BaseDataModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\System\BaseDataModule.Designer.cs">
+      <DependentUpon>BaseDataModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\System\TypeDefineModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\System\TypeDefineModule.Designer.cs">
+      <DependentUpon>TypeDefineModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sample\TestModule2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Sample\TestModule2.Designer.cs">
+      <DependentUpon>TestModule2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sample\TestModule1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\Sample\TestModule1.Designer.cs">
+      <DependentUpon>TestModule1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManagePayGroupImpowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManagePayGroupImpowers.Designer.cs">
+      <DependentUpon>ManagePayGroupImpowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageGradeImpowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageGradeImpowers.Designer.cs">
+      <DependentUpon>ManageGradeImpowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\DataPrivileges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\DataPrivileges.Designer.cs">
+      <DependentUpon>DataPrivileges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayCheckForm.Designer.cs">
+      <DependentUpon>PayCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayBankReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayBankReportForm.Designer.cs">
+      <DependentUpon>PayBankReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayDeptReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayDeptReportForm.Designer.cs">
+      <DependentUpon>PayDeptReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayBankDetailReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayBankDetailReportForm.Designer.cs">
+      <DependentUpon>PayBankDetailReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RatePayingDeclarationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RatePayingDeclarationReportForm.Designer.cs">
+      <DependentUpon>RatePayingDeclarationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AuditingPayReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AuditingPayReportForm.Designer.cs">
+      <DependentUpon>AuditingPayReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayBankDetailReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayBankDetailReportForm.Designer.cs">
+      <DependentUpon>PrivateSalaryPayBankDetailReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AuditingPayDeptReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AuditingPayDeptReportForm.Designer.cs">
+      <DependentUpon>AuditingPayDeptReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayItemsForm.Designer.cs">
+      <DependentUpon>PrivateSalaryPayItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayStepReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PayStepReportForm.Designer.cs">
+      <DependentUpon>PayStepReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryCaluDeptReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryCaluDeptReportForm.Designer.cs">
+      <DependentUpon>PrivateSalaryCaluDeptReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalaryMonthReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalaryMonthReportForm.Designer.cs">
+      <DependentUpon>SalaryMonthReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalaryCaluReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalaryCaluReportForm.Designer.cs">
+      <DependentUpon>SalaryCaluReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\各公司职务薪酬统计表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\各公司职务薪酬统计表.Designer.cs">
+      <DependentUpon>各公司职务薪酬统计表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\各公司部门薪酬统计表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\各公司部门薪酬统计表.Designer.cs">
+      <DependentUpon>各公司部门薪酬统计表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\销售公司省办薪酬统计表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\销售公司省办薪酬统计表.Designer.cs">
+      <DependentUpon>销售公司省办薪酬统计表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\销售公司部门薪酬统计表（按本部汇总）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\销售公司部门薪酬统计表（按本部汇总）.Designer.cs">
+      <DependentUpon>销售公司部门薪酬统计表（按本部汇总）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\销售公司部门薪酬统计表（按体系汇总）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\销售公司部门薪酬统计表（按体系汇总）.Designer.cs">
+      <DependentUpon>销售公司部门薪酬统计表（按体系汇总）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\FormSystemManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RBACS\FormSystemManage.Designer.cs">
+      <DependentUpon>FormSystemManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageActions.Designer.cs">
+      <DependentUpon>ManageActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageImpowers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageImpowers.Designer.cs">
+      <DependentUpon>ManageImpowers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManagePrivileges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManagePrivileges.Designer.cs">
+      <DependentUpon>ManagePrivileges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageResources.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageResources.Designer.cs">
+      <DependentUpon>ManageResources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageRoles.Designer.cs">
+      <DependentUpon>ManageRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ManageUserInRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ManageUserInRole.Designer.cs">
+      <DependentUpon>ManageUserInRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBACS\ViewLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RBACS\ViewLog.Designer.cs">
+      <DependentUpon>ViewLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UserControls\ReportBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReportBase.Designer.cs">
+      <DependentUpon>ReportBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Backup\PublicPayReportForm.resx">
+      <DependentUpon>PublicPayReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\DeveloperConfig.resx">
+      <DependentUpon>DeveloperConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FrmFrameBase.resx">
+      <DependentUpon>FrmFrameBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ModuleBase.resx">
+      <DependentUpon>ModuleBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CVR\IdReaderForm.resx">
+      <DependentUpon>IdReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseDataManageForm.resx">
+      <DependentUpon>BaseDataManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\DatabaseConfig.resx">
+      <DependentUpon>DatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\SalaryDecuctionInfoForm.resx">
+      <DependentUpon>SalaryDecuctionInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditReimbursementStandardForm.resx">
+      <DependentUpon>EditReimbursementStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditPerformanceSalaryForm.resx">
+      <DependentUpon>EditPerformanceSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditPersonReimbursementForm.resx">
+      <DependentUpon>EditPersonReimbursementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditEffectivePerformanceSalaryForm.resx">
+      <DependentUpon>EditEffectivePerformanceSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditPersonBorrowForm.resx">
+      <DependentUpon>EditPersonBorrowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditEmployeeQueryPowerForm.resx">
+      <DependentUpon>EditEmployeeQueryPowerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditAuthorizeComputerForm.resx">
+      <DependentUpon>EditAuthorizeComputerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditGradeSalaryStandardForm.resx">
+      <DependentUpon>EditGradeSalaryStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditJobGradeForm.resx">
+      <DependentUpon>EditJobGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportEmpPayRateForm.resx">
+      <DependentUpon>ImportEmpPayRateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmpPayRateForm.resx">
+      <DependentUpon>EmpPayRateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportOtherMoneyForm.resx">
+      <DependentUpon>ImportOtherMoneyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexForms\FunctionForm.resx">
+      <DependentUpon>FunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexForms\SelectCompanyForm.resx">
+      <DependentUpon>SelectCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexForms\SelectInputTypeDialog.resx">
+      <DependentUpon>SelectInputTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexForms\SelectJobGradeForm.resx">
+      <DependentUpon>SelectJobGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelConfigForm.resx">
+      <DependentUpon>LevelConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\AdjustGradeSalaryStandardByIncreaseForm.resx">
+      <DependentUpon>AdjustGradeSalaryStandardByIncreaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\EditEmployeeQueryPowerForm.resx">
+      <DependentUpon>EditEmployeeQueryPowerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\GradeSalaryStandardForm.resx">
+      <DependentUpon>GradeSalaryStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PersonRepaymentList.resx">
+      <DependentUpon>PersonRepaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\ReimbursementStandardList.resx">
+      <DependentUpon>ReimbursementStandardList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PerformanceSalaryList.resx">
+      <DependentUpon>PerformanceSalaryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PersonReimbursementList.resx">
+      <DependentUpon>PersonReimbursementList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\EffectivePerformanceSalaryList.resx">
+      <DependentUpon>EffectivePerformanceSalaryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PersonBorrowList.resx">
+      <DependentUpon>PersonBorrowList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\SalaryChangedList.resx">
+      <DependentUpon>SalaryChangedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PayChangedList.resx">
+      <DependentUpon>PayChangedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\SalaryAdjustDetail.resx">
+      <DependentUpon>SalaryAdjustDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\NormalSalaryList.resx">
+      <DependentUpon>NormalSalaryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\AdjustGradeSalaryStandardForm.resx">
+      <DependentUpon>AdjustGradeSalaryStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\AdjustMonthlySalaryForm.resx">
+      <DependentUpon>AdjustMonthlySalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\MonthlySalaryForm.resx">
+      <DependentUpon>MonthlySalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\IndividualAdjustMonthlySalaryForm.resx">
+      <DependentUpon>IndividualAdjustMonthlySalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageDeptSystem.resx">
+      <DependentUpon>ManageDeptSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\IndexForm.resx">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate51Form.resx">
+      <DependentUpon>RiseRate51Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate52Form.resx">
+      <DependentUpon>RiseRate52Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate53Form.resx">
+      <DependentUpon>RiseRate53Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate71Form.resx">
+      <DependentUpon>RiseRate71Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate72Form.resx">
+      <DependentUpon>RiseRate72Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineePersonalAbilityListForm.resx">
+      <DependentUpon>TraineePersonalAbilityListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsFirstYearForm.resx">
+      <DependentUpon>TraineeMonthlySalaryItemsFirstYearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineePersonalSalaryPlanForm.resx">
+      <DependentUpon>TraineePersonalSalaryPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeSalaryStandardInputForm.resx">
+      <DependentUpon>TraineeSalaryStandardInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeFunctionForm.resx">
+      <DependentUpon>TraineeFunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate52InputForm.resx">
+      <DependentUpon>RiseRate52InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate51InputForm.resx">
+      <DependentUpon>RiseRate51InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate71InputForm.resx">
+      <DependentUpon>RiseRate71InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate53InputForm.resx">
+      <DependentUpon>RiseRate53InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\RiseRate72InputForm.resx">
+      <DependentUpon>RiseRate72InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\SelectTraineeTypeForm.resx">
+      <DependentUpon>SelectTraineeTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\SpecialtyPropertyForm.resx">
+      <DependentUpon>SpecialtyPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeAnnualAssessmentForm.resx">
+      <DependentUpon>TraineeAnnualAssessmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeSalaryPlanForm.resx">
+      <DependentUpon>TraineeSalaryPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryItemsForm.resx">
+      <DependentUpon>TraineeMonthlySalaryItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeMonthlySalaryCalculatorForm.resx">
+      <DependentUpon>TraineeMonthlySalaryCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorFirstYearForm.resx">
+      <DependentUpon>TraineeYearlySalaryCalculatorFirstYearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeYearlySalaryCalculatorForm.resx">
+      <DependentUpon>TraineeYearlySalaryCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagementTraineeForms\TraineeInfoForm.resx">
+      <DependentUpon>TraineeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Last5YearMonthlySalaryStandardForm.resx">
+      <DependentUpon>Last5YearMonthlySalaryStandardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditContractAllowanceForm.resx">
+      <DependentUpon>EditContractAllowanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditContractAllowanceListForm.resx">
+      <DependentUpon>EditContractAllowanceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\MyMonthlyWageLoanItemListForm.resx">
+      <DependentUpon>MyMonthlyWageLoanItemListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditMonthlyWageLoanItemListForm.resx">
+      <DependentUpon>EditMonthlyWageLoanItemListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditMonthlyWageLoanForm.resx">
+      <DependentUpon>EditMonthlyWageLoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditRembursementSalaryForm.resx">
+      <DependentUpon>EditRembursementSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryForm.resx">
+      <DependentUpon>EditMonthlyRembursementSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditMonthlyRembursementSalaryItemListForm.resx">
+      <DependentUpon>EditMonthlyRembursementSalaryItemListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\MyRembursementSalaryListForm.resx">
+      <DependentUpon>MyRembursementSalaryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\RembursementSalaryCalculatorForm.resx">
+      <DependentUpon>RembursementSalaryCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\RembursementSalaryListForm.resx">
+      <DependentUpon>RembursementSalaryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SalaryDetailListForm.resx">
+      <DependentUpon>SalaryDetailListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SearchRembursementSalaryForm.resx">
+      <DependentUpon>SearchRembursementSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SalaryStructureListForm.resx">
+      <DependentUpon>SalaryStructureListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\ContractAllowanceCalculatorForm.resx">
+      <DependentUpon>ContractAllowanceCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SalaryDetailForm.resx">
+      <DependentUpon>SalaryDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\WageLoanCalculatorForm.resx">
+      <DependentUpon>WageLoanCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SearchWageLoanForm.resx">
+      <DependentUpon>SearchWageLoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\SearchSalaryStructureForm.resx">
+      <DependentUpon>SearchSalaryStructureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditWageLoanForm.resx">
+      <DependentUpon>EditWageLoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditSalaryStructureForm.resx">
+      <DependentUpon>EditSalaryStructureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditRembursementSalaryListForm.resx">
+      <DependentUpon>EditRembursementSalaryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditWageLoanListForm.resx">
+      <DependentUpon>EditWageLoanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStructureForms\EditSalaryStructureListForm.resx">
+      <DependentUpon>EditSalaryStructureListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryTreeForm.resx">
+      <DependentUpon>SalaryTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeePickerForm.resx">
+      <DependentUpon>EmployeePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchEmployeeInfoForm.resx">
+      <DependentUpon>SearchEmployeeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OtherMoneyForm.resx">
+      <DependentUpon>OtherMoneyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrivateSalaryTreeView.resx">
+      <DependentUpon>PrivateSalaryTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditEmployeeSalaryStepForm.resx">
+      <DependentUpon>EditEmployeeSalaryStepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\EmployeeSalaryStepList.resx">
+      <DependentUpon>EmployeeSalaryStepList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QueryEmployeePayInfoForm.resx">
+      <DependentUpon>QueryEmployeePayInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="RBACS\ManageLevelImpowers.resx">
+      <DependentUpon>ManageLevelImpowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\RoleLevelSettingsForm.resx">
+      <DependentUpon>RoleLevelSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\RoleFunctionSettingsForm.resx">
+      <DependentUpon>RoleFunctionSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\RolePaygroupSettingsForm.resx">
+      <DependentUpon>RolePaygroupSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DrillDownItemsForm.resx">
+      <DependentUpon>DrillDownItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayReportForm.resx">
+      <DependentUpon>PayReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PublicPayCategoryDetailReportForm.resx">
+      <DependentUpon>PublicPayCategoryDetailReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PublicPayReportForm.resx">
+      <DependentUpon>PublicPayReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditForms\EditPersonPayRateForm.resx">
+      <DependentUpon>EditPersonPayRateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StepPayRateView.resx">
+      <DependentUpon>StepPayRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PayRateInputForm.resx">
+      <DependentUpon>PayRateInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryStandardTreeList.resx">
+      <DependentUpon>SalaryStandardTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemManageForm.resx">
+      <DependentUpon>SystemManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForms\PersonPayRateList.resx">
+      <DependentUpon>PersonPayRateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SalaryPlanTree.resx">
+      <DependentUpon>SalaryPlanTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\System\BaseDataModule.resx">
+      <DependentUpon>BaseDataModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\System\TypeDefineModule.resx">
+      <DependentUpon>TypeDefineModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sample\TestModule2.resx">
+      <DependentUpon>TestModule2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sample\TestModule1.resx">
+      <DependentUpon>TestModule1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManagePayGroupImpowers.resx">
+      <DependentUpon>ManagePayGroupImpowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageGradeImpowers.resx">
+      <DependentUpon>ManageGradeImpowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\DataPrivileges.resx">
+      <DependentUpon>DataPrivileges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\FormSystemManage.resx">
+      <DependentUpon>FormSystemManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageActions.resx">
+      <DependentUpon>ManageActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageImpowers.resx">
+      <DependentUpon>ManageImpowers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManagePrivileges.resx">
+      <DependentUpon>ManagePrivileges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageResources.resx">
+      <DependentUpon>ManageResources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageRoles.resx">
+      <DependentUpon>ManageRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ManageUserInRole.resx">
+      <DependentUpon>ManageUserInRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RBACS\ViewLog.resx">
+      <DependentUpon>ViewLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayCheckForm.resx">
+      <DependentUpon>PayCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayBankReportForm.resx">
+      <DependentUpon>PayBankReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayDeptReportForm.resx">
+      <DependentUpon>PayDeptReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayBankDetailReportForm.resx">
+      <DependentUpon>PayBankDetailReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RatePayingDeclarationReportForm.resx">
+      <DependentUpon>RatePayingDeclarationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditingPayReportForm.resx">
+      <DependentUpon>AuditingPayReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrivateSalaryPayBankDetailReportForm.resx">
+      <DependentUpon>PrivateSalaryPayBankDetailReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditingPayDeptReportForm.resx">
+      <DependentUpon>AuditingPayDeptReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrivateSalaryPayItemsForm.resx">
+      <DependentUpon>PrivateSalaryPayItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayStepReportForm.resx">
+      <DependentUpon>PayStepReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrivateSalaryCaluDeptReportForm.resx">
+      <DependentUpon>PrivateSalaryCaluDeptReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalaryMonthReportForm.resx">
+      <DependentUpon>SalaryMonthReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalaryCaluReportForm.resx">
+      <DependentUpon>SalaryCaluReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\各公司职务薪酬统计表.resx">
+      <DependentUpon>各公司职务薪酬统计表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\各公司部门薪酬统计表.resx">
+      <DependentUpon>各公司部门薪酬统计表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\销售公司省办薪酬统计表.resx">
+      <DependentUpon>销售公司省办薪酬统计表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\销售公司部门薪酬统计表（按本部汇总）.resx">
+      <DependentUpon>销售公司部门薪酬统计表（按本部汇总）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\销售公司部门薪酬统计表（按体系汇总）.resx">
+      <DependentUpon>销售公司部门薪酬统计表（按体系汇总）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PreviewControl.resx">
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="log4net.config" />
+    <None Include="Properties\DataSources\AdjustJobGrade.datasource" />
+    <None Include="Properties\DataSources\MonthlySalaryInput.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="ReportTemplates\5-YearSalaryList.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\51YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\52YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\53YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\6-YearSalaryList.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\62YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\7-YearSalaryList.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\71YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\72YearSalaryPlan.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\MonthlySalaryDetail.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\月薪执行标准年度汇总.tab">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="专用算薪系统_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Components\Components.csproj">
+      <Project>{BA370FDA-1BC6-4D12-9478-B34F8FEC665E}</Project>
+      <Name>Components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accessibilitycpl_8.ico" />
+    <Content Include="CVR.ico" />
+    <Content Include="sdtapi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="termb.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UnPack.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="__TemplateIcon.ico" />
+    <EmbeddedResource Include="Images\copy.ico" />
+    <EmbeddedResource Include="Images\delete.ico" />
+    <Content Include="Images\DSC_01.jpg" />
+    <Content Include="Images\DSC_02.jpg" />
+    <Content Include="Images\DSC_03.jpg" />
+    <Content Include="Images\DSC_04.jpg" />
+    <Content Include="Images\IMG_05.jpg" />
+    <Content Include="Images\IMG_06.jpg" />
+    <Content Include="Images\IMG_07.jpg" />
+    <Content Include="Images\IMG_08.jpg" />
+    <Content Include="Images\IMG_09.jpg" />
+    <Content Include="Images\IMG_10.jpg" />
+    <Content Include="Images\IMG_11.jpg" />
+    <Content Include="Images\IMG_12.jpg" />
+    <Content Include="Images\IMG_13.jpg" />
+    <Content Include="Images\IMG_14.jpg" />
+    <EmbeddedResource Include="Images\move.ico" />
+    <Content Include="Images\Ribbon_AlignCenter_16x16.png" />
+    <Content Include="Images\Ribbon_AlignLeft_16x16.png" />
+    <Content Include="Images\Ribbon_AlignRight_16x16.png" />
+    <Content Include="Images\Ribbon_Bold_16x16.png" />
+    <Content Include="Images\Ribbon_Close_16x16.png" />
+    <Content Include="Images\Ribbon_Close_32x32.png" />
+    <Content Include="Images\Ribbon_Content_16x16.png" />
+    <Content Include="Images\Ribbon_Content_32x32.png" />
+    <Content Include="Images\Ribbon_Exit_16x16.png" />
+    <Content Include="Images\Ribbon_Exit_32x32.png" />
+    <Content Include="Images\Ribbon_Find_16x16.png" />
+    <Content Include="Images\Ribbon_Find_32x32.png" />
+    <Content Include="Images\Ribbon_Info_16x16.png" />
+    <Content Include="Images\Ribbon_Info_32x32.png" />
+    <Content Include="Images\Ribbon_Italic_16x16.png" />
+    <Content Include="Images\Ribbon_New_16x16.png" />
+    <Content Include="Images\Ribbon_New_32x32.png" />
+    <Content Include="Images\Ribbon_Open_16x16.png" />
+    <Content Include="Images\Ribbon_Open_32x32.png" />
+    <Content Include="Images\Ribbon_SaveAs_16x16.png" />
+    <Content Include="Images\Ribbon_SaveAs_32x32.png" />
+    <Content Include="Images\Ribbon_Save_16x16.png" />
+    <Content Include="Images\Ribbon_Save_32x32.png" />
+    <Content Include="Images\Ribbon_Underline_16x16.png" />
+    <Content Include="PerfCenterCpl.ico" />
+    <Content Include="zh-CN\DevExpress.Data.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.PivotGrid.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.RichEdit.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.Utils.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.Xpf.Grid.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.Xpf.LayoutControl.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.Xpf.NavBar.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.Xpo.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraBars.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraCharts.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraEditors.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraLayout.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraNavBar.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraPrinting.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraReports.v11.1.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraReports.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraRichEdit.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraScheduler.v11.1.Core.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraScheduler.v11.1.Extensions.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraScheduler.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraSpellChecker.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraTreeList.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraVerticalGrid.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="zh-CN\DevExpress.XtraWizard.v11.1.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="accessibilitycpl_8.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Aspose.Cells">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="BlackHen.Threading">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Components">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CryptoHelper">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CVR.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.BonusSkins.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v17.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Diagram.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.OfficeSkins.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v17.1.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Reports.v17.1.Designer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v17.1.Export">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.SpellChecker.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Spreadsheet.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v17.1.UI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v17.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v17.1.Wizard">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraDiagram.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v17.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v17.1.Core">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v17.1.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v17.1.Reporting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraSpellChecker.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraSpreadsheet.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraWizard.v17.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Hwagain.CommLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="RTFLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="sdtapi.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="SSO">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="termb.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="UnPack.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="urlmon_3.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Data.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.PivotGrid.v17.1.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.RichEdit.v17.1.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Utils.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Xpf.Grid.v17.1.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Xpf.LayoutControl.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Xpf.NavBar.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.Xpo.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraBars.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraCharts.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraEditors.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraGrid.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraLayout.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraNavBar.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraPrinting.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraReports.v17.1.Extensions.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraReports.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraRichEdit.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraScheduler.v17.1.Core.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraScheduler.v17.1.Extensions.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraScheduler.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraSpellChecker.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraTreeList.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraVerticalGrid.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\DevExpress.XtraWizard.v17.1.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\PrintForms\" />
+    <Folder Include="Modules\Reports\" />
+    <Folder Include="Modules\SalaryManage\" />
+    <Folder Include="PrintViews\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

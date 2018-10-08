@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" GraphDirection="LeftToRight" Layout="ForceDirected" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @4 Type=AuditingPayReportForm)" Category="CodeSchema_Class" Bounds="2205.03870049262,662.837738967587,199.595072133334,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AuditingPayReportForm" />
+    <Node Id="(@1 @4 Type=DataPrivileges)" Category="CodeSchema_Class" Bounds="2205.03870049262,550.837738967587,142.533333333334,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="DataPrivileges" />
+    <Node Id="(@1 @4 Type=PayBankDetailReportForm)" Category="CodeSchema_Class" Bounds="2205.03870049262,718.83758086092,211.673369013333,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PayBankDetailReportForm" />
+    <Node Id="(@1 @4 Type=PayDeptReportForm)" Category="CodeSchema_Class" Bounds="2377.57203382595,550.837738967587,178.23,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PayDeptReportForm" />
+    <Node Id="(@1 @4 Type=RatePayingDeclarationReportForm)" Category="CodeSchema_Class" Bounds="2205.03870049262,606.837738967587,259.853333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="RatePayingDeclarationReportForm" />
+    <Node Id="(@1 Namespace=Hwagain.CompetingProductPriceSystem.Components.Properties)" Category="CodeSchema_Namespace" Bounds="-33.5165547735883,1763.67434014999,426.926666666667,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.CompetingProductPriceSystem‎.Components‎.Properties" />
+    <Node Id="(@1 Namespace=Hwagain.SalaryCalculation.Backup)" Category="CodeSchema_Namespace" Bounds="342.986778559745,1596.16404014999,252.93,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Backup" />
+    <Node Id="(@1 Namespace=Hwagain.SalaryCalculation.Components.Properties)" Category="CodeSchema_Namespace" Bounds="-33.5165547735883,1596.16404014999,346.503333333333,25.836666666667" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Components‎.Properties" />
+    <Node Id="(@1 Namespace=Hwagain.SalaryCalculation.Properties)" Category="CodeSchema_Namespace" Bounds="-33.5165547735882,1652.00080681666,269.8,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Properties" />
+    <Node Id="@10" Category="CodeSchema_Namespace" Bounds="-33.5165547735882,1427.71759522805,261.14,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Modules" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="2259.15753541629,380.720063553811,246.393333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AdjustPersonPayRateOrderForm" />
+    <Node Id="@12" Category="CodeSchema_Class" Bounds="2331.37593721431,494.837897074254,198.163126266667,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="EditPersonPayRateForm" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="2205.03870049262,436.72006355381,239.966666666667,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="EditPersonPayRateForm4Check" />
+    <Node Id="@14" Category="CodeSchema_Class" Bounds="1894.49058586442,1031.15511980201,162.406666666667,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="EmpPayRateForm" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="1307.13412514195,1041.51486603863,179.053333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="FormSystemManage" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="1820.18595706788,967.06794078382,201.529864106667,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ImportEmpPayRateForm" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="1819.5030210244,1199.15259009534,202.891877733333,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ImportOtherMoneyForm" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="1744.71715253108,1033.9513788426,119.773333333334,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainForm" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="1106.10315011834,1041.51492789848,150.57,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageActions" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-53.5165547735883,1275.20729522805,669.433333333334,534.303811588613" CodeSchemaProperty_StrongName="SalaryCalculation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="11" FilePath="$(99fac269-d907-4130-8ec6-c61f34b2a2de.OutputPath)" Group="Expanded" Label="SalaryCalculation.exe" UseManualLocation="True" />
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="1074.90109669474,1184.702008183,198.98899272,25.9998418933333" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageGradeImpowers" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="1468.09684273509,929.514866038633,164.353333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageImpowers" />
+    <Node Id="@22" Category="CodeSchema_Class" Bounds="1360.05584460067,1308.11818447357,220.873333333334,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManagePayGroupImpowers" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="1060.50720103742,985.514936844575,162.526666666666,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManagePrivileges" />
+    <Node Id="@24" Category="CodeSchema_Class" Bounds="1226.03389968984,1252.11818447357,166.053333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageResources" />
+    <Node Id="@25" Category="CodeSchema_Class" Bounds="1407.60800801091,1194.93710909235,138.89,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageRoles" />
+    <Node Id="@26" Category="CodeSchema_Class" Bounds="1154.40987920456,929.514812674386,170.163333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ManageUserInRole" />
+    <Node Id="@28" Category="CodeSchema_Class" Bounds="-465.28335677008,122.513709694347,1183.79570448177,858.678482585286" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="26" Group="Expanded" Label="ManageUsers" UseManualLocation="True" />
+    <Node Id="@29" Category="CodeSchema_Class" Bounds="1839.39043519293,1143.15259009534,163.77,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="OtherMoneyForm" />
+    <Node Id="@3" Category="CodeSchema_Namespace" Bounds="38.3351499296531,1316.04406189472,163.34,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.Common" />
+    <Node Id="@30" Category="CodeSchema_Class" Bounds="2410.58332558457,266.054688483469,178.236666666667,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PayBankReportForm" />
+    <Node Id="@31" Category="CodeSchema_Class" Bounds="2208.6800971676,210.799258748147,145.933333333333,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PayCheckForm" />
+    <Node Id="@32" Category="CodeSchema_Class" Bounds="2205.03870049262,98.7992587481468,150.146666666667,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PayReportForm" />
+    <Node Id="@33" Category="CodeSchema_Class" Bounds="2205.03870049262,322.054688483469,165.76,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PersonPayRateList" />
+    <Node Id="@34" Category="CodeSchema_Class" Bounds="1933.22916825688,911.067930694657,110.693333333333,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Program" />
+    <Node Id="@35" Category="CodeSchema_Class" Bounds="2261.43423446848,154.799258748147,270.570000000001,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PublicPayCategoryDetailReportForm" />
+    <Node Id="@36" Category="CodeSchema_Class" Bounds="2408.13920806991,40.8366666666667,184.95,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="PublicPayReportForm" />
+    <Node Id="@37" Category="CodeSchema_Class" Bounds="1966.84089803929,1087.15511980201,208.197802453333,25.9974702933332" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SearchEmployeeInfoForm" />
+    <Node Id="@38" Category="CodeSchema_Class" Bounds="1422.0247025865,985.514866038633,110.056666666667,26" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ViewLog" />
+    <Node Id="@40" Category="CodeSchema_Method" Bounds="616.969014378359,313.168923989107,81.5433333333333,25.8366666666666" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="Dispose" />
+    <Node Id="@42" Category="CodeSchema_Method" Bounds="-445.28335677008,828.324321555675,254.283671333334,25.8366993333334" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="gridView2_CustomColumnDisplayText" />
+    <Node Id="@44" Category="CodeSchema_Method" Bounds="118.632811578879,555.62698261134,111.666666666667,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnAdd_Click" />
+    <Node Id="@45" Category="CodeSchema_Method" Bounds="51.5803523666397,838.485306276379,186.237283333333,25.8366993333334" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnChangePassword_Click" />
+    <Node Id="@46" Category="CodeSchema_Method" Bounds="159.527088108829,655.806764260103,125.103333333333,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnDelete_Click" />
+    <Node Id="@47" Category="CodeSchema_Method" Bounds="220.000871926639,711.643558883879,147.708744213334,25.8385534933333" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="ManageUsers_Load" />
+    <Node Id="@48" Category="CodeSchema_Method" Bounds="-374.275754513571,244.005600465831,168.694126,25.8366993333334" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="gridView1_InitNewRow" />
+    <Node Id="@49" Category="CodeSchema_Method" Bounds="306.823727920019,432.78076328354,114.33,25.8366666666666" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="ManageUsers" />
+    <Node Id="@5" Category="CodeSchema_Namespace" Bounds="1040.50720103743,-0.000539940683552231,1572.58200703249,1354.11894677733" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="32" Group="Expanded" Label="Hwagain‎.SalaryCalculation" />
+    <Node Id="@50" Category="CodeSchema_Field" Bounds="-333.793879908751,665.320497170259,80.3233333333334,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnAdd" />
+    <Node Id="@51" Category="CodeSchema_Field" Bounds="-98.3697066086207,163.513809694347,154.900218666667,25.8366993333334" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnChangePassword" />
+    <Node Id="@52" Category="CodeSchema_Field" Bounds="-276.623571884661,547.200776711275,93.76,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="btnDelete" />
+    <Node Id="@53" Category="CodeSchema_Field" Bounds="-59.8399634862308,325.2279449852,77.8399999999999,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="col姓名" />
+    <Node Id="@54" Category="CodeSchema_Field" Bounds="478.165674534609,357.440126076509,108.803333333333,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="components" />
+    <Node Id="@55" Category="CodeSchema_Field" Bounds="79.9075153549192,713.313783303071,110.093333333333,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="gridControl1" />
+    <Node Id="@56" Category="CodeSchema_Field" Bounds="120.296899306739,440.653932228853,94.76,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="gridView1" />
+    <Node Id="@57" Category="CodeSchema_Field" Bounds="-184.600073349511,299.842546120454,94.76,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="gridView2" />
+    <Node Id="@58" Category="CodeSchema_Method" Bounds="-124.715444266171,547.201370729504,151.764179333333,25.8366993333334" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="InitializeComponent" />
+    <Node Id="@59" Category="CodeSchema_Field" Bounds="-309.399709579981,403.933229103853,75.73,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="panel2" />
+    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="-33.516554773588,1707.83757348333,341.03,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Components‎.Common" />
+    <Node Id="@60" Category="CodeSchema_Field" Bounds="-158.526614971901,935.3553929463,177.535690666667,25.8366993333332" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="repositoryItemDateEdit1" />
+    <Node Id="@61" Category="CodeSchema_Field" Bounds="288.703281142679,577.515763893892,82.28,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="UserList" />
+    <Node Id="@62" Category="CodeSchema_Field" Bounds="-199.764140732321,772.487554889008,85,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="创建时间" />
+    <Node Id="@63" Category="CodeSchema_Field" Bounds="-403.623698837791,502.788118019868,97,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="身份证号码" />
+    <Node Id="@64" Category="CodeSchema_Field" Bounds="10.3427928614292,269.391175881196,61,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="姓名" />
+    <Node Id="@65" Category="CodeSchema_Field" Bounds="55.1861766504892,611.463749278007,73,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="用户名" />
+    <Node Id="@66" Category="CodeSchema_Field" Bounds="-63.4199024510708,802.483216896821,85,25.8366666666667" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="邮箱地址" />
+    <Node Id="@67" Category="CodeSchema_Field" Bounds="-435.405559189351,558.624787941743,109,25.8366666666666" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="最后登录时间" />
+    <Node Id="@7" Category="CodeSchema_Namespace" Bounds="117.557140550553,1540.32727348333,347.993333333333,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Components‎.PrintViews" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="-33.5165547735883,1483.55436189472,362.25,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Components‎.UserControls" />
+    <Node Id="@9" Category="CodeSchema_Namespace" Bounds="92.8354606694892,1371.88082856138,246.543333333333,25.8366666666666" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Hwagain‎.SalaryCalculation‎.Forms" />
+  </Nodes>
+  <Links>
+    <Link Source="@10" Target="@3" Category="InheritsFrom" Bounds="89.4604034423828,1347.82202148438,9.08516693115234,79.8956298828125" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="52">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@11" Target="@33" Category="InheritsFrom" Bounds="2316.49014857233,352.803557883253,44.9375441479551,27.9161738729998" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@13" Target="@12" Category="InheritsFrom" Bounds="2348.60511199134,462.719831756253,50.3827535509408,27.7731257798097" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@14" Target="@37" Category="References" Bounds="1997.8044111671,1057.15511980201,43.2681253296389,25.4397609092082" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@19" Category="References" Bounds="1265.67315011834,1054.51495478708,41.460975023612,3.56140776602842E-06" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@20" Category="References" Bounds="1202.13687904129,1067.51496603863,174.343974717783,112.313113438042" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@21" Category="References" Bounds="1399.16271972656,957.594421386719,87.617431640625,83.9205932617188" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@22" Category="References" Bounds="1397.04638671875,1067.51501464844,56.3516845703125,233.788818359375" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@23" Category="References" Bounds="1209.7317097411,1013.44611213067,127.758254648677,28.0688539079657" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@24" Category="References" Bounds="1317.92436152689,1067.51496603863,73.3290920981335,176.293430318204" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@25" Category="References" Bounds="1403.47270819714,1067.51496603863,62.5911692234042,119.450262377746" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@26" Category="References" Bounds="1265.06377397038,960.737727091379,113.354198460077,80.7772389472534" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@28" Category="References" Bounds="726.880752984612,789.427791714798,636.933709962862,252.087174323835" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@15" Target="@38" Category="References" Bounds="1415.32324372291,1016.65909195279,35.6824273011405,24.8558740858402" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@15" Target="@49" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@16" Target="@37" Category="References" Bounds="1967.31982421875,993.06787109375,102.53369140625,85.0994873046875" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@17" Target="@37" Category="References" Bounds="1957.47436523438,1120.42846679688,98.69677734375,78.7257080078125" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@18" Target="@10" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5" />
+    <Link Source="@18" Target="@14" Category="CodeSchema_Calls" Bounds="1864.49048586441,1045.62936507178,21.0013017977967,0.343241000044827" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@18" Target="@15" Category="References" Bounds="1495.1859119506,1048.06172744414,249.531240580483,4.62650539959373" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@18" Target="@16" Category="CodeSchema_Calls" Bounds="1827.21733164382,997.553386353343,63.3143475038048,36.3979952036356" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@18" Target="@17" Category="CodeSchema_Calls" Bounds="1807.02551269531,1059.95141601563,69.1810302734375,136.165893554688" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@18" Target="@29" Category="CodeSchema_Calls" Bounds="1818.49296096296,1059.95138155698,82.3225260397023,77.0524814712765" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4" />
+    <Link Source="@18" Target="@3" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@18" Target="@6" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@2" Target="(@1 Namespace=Hwagain.CompetingProductPriceSystem.Components.Properties)" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="(@1 Namespace=Hwagain.SalaryCalculation.Backup)" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="(@1 Namespace=Hwagain.SalaryCalculation.Components.Properties)" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="(@1 Namespace=Hwagain.SalaryCalculation.Properties)" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@10" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@3" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@6" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@7" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@8" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@9" Category="Contains" FetchingParent="@2" />
+    <Link Source="@28" Target="@40" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@42" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@44" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@45" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@46" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@47" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@48" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@49" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@50" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@51" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@52" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@53" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@54" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@55" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@56" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@57" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@58" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@59" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@60" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@61" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@62" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@63" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@64" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@65" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@66" Category="Contains" FetchingParent="@28" />
+    <Link Source="@28" Target="@67" Category="Contains" FetchingParent="@28" />
+    <Link Source="@29" Target="@37" Category="References" Bounds="1956.01953747526,1116.30785683497,71.7496955911902,26.8461690305264" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@30" Target="@35" Category="CodeSchema_Calls" Bounds="2414.86618846874,187.403618653402,72.8021672863601,78.6507380325089" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@31" Target="@35" Category="CodeSchema_Calls" Bounds="2308.35996824363,184.737093068068,53.5534689066653,26.061833882521" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@32" Target="@31" Category="CodeSchema_Calls" Bounds="2252.52734375,124.798728942871,18.605712890625,77.9455337524414" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="4" />
+    <Link Source="@32" Target="@35" Category="CodeSchema_Calls" Bounds="2307.18151420818,124.798726950589,54.3553099793075,26.1039007677028" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@34" Target="@18" Category="CodeSchema_Calls" Bounds="1805.93347167969,934.171508789063,127.759765625,90.7962646484375" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@36" Target="@35" Category="CodeSchema_Calls" Bounds="2414.63419510523,66.8362348691091,74.1284515694092,81.3116380417492" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@40" Target="@54" Category="CodeSchema_FieldRead" Bounds="577.577857994241,339.005590655773,43.6372521987497,15.4335868407864" Weight="2" />
+    <Link Source="@44" Target="@55" Category="CodeSchema_FieldRead" Bounds="140.378683656449,581.463649278006,30.8504832396189,123.120028618051" Weight="1" />
+    <Link Source="@44" Target="@56" Category="CodeSchema_FieldRead" Bounds="168.970269295383,475.474948350329,4.73303826040967,80.1520342610105" Weight="2" />
+    <Link Source="@44" Target="@61" Category="CodeSchema_FieldRead" Bounds="230.299478245546,576.410846557854,49.4918014078488,6.97216619238645" Weight="1" />
+    <Link Source="@44" Target="@65" Category="CodeSchema_FieldRead" Bounds="118.299357162348,581.463649278007,37.0149047314288,24.9673035889934" Weight="1" />
+    <Link Source="@45" Target="@55" Category="CodeSchema_FieldRead" Bounds="136.658446917185,748.123299361306,7.03483216126318,90.3620069150729" Weight="1" />
+    <Link Source="@46" Target="@55" Category="CodeSchema_FieldRead" Bounds="162.037074618216,681.643430926769,40.4700819230137,26.7124841850404" Weight="2" />
+    <Link Source="@46" Target="@61" Category="CodeSchema_FieldRead" Bounds="239.860339716399,608.642298337016,64.9200585991763,47.1644659230861" Weight="1" />
+    <Link Source="@47" Target="@55" Category="CodeSchema_FieldRead" Bounds="199.000352116657,725.338687591486,21.0005198099817,0.2206138108088" Weight="1" />
+    <Link Source="@47" Target="@61" Category="CodeSchema_FieldRead" Bounds="297.321610872508,612.044979145329,26.7232617434586,99.5985797385501" Weight="2">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@49" Target="@54" Category="CodeSchema_FieldWrite" Bounds="392.894173904688,386.948995927078,102.550974767445,45.8317673564614" Weight="1" />
+    <Link Source="@49" Target="@58" Category="CodeSchema_Calls" Bounds="6.44822710256232,458.617429950206,310.932004086704,86.1800648923987" Weight="1" />
+    <Link Source="@49" Target="@61" Category="CodeSchema_FieldWrite" Bounds="334.957459115168,458.617429950206,25.9836143921306,110.138797404751" Weight="1" />
+    <Link Source="@5" Target="(@1 @4 Type=AuditingPayReportForm)" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="(@1 @4 Type=DataPrivileges)" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="(@1 @4 Type=PayBankDetailReportForm)" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="(@1 @4 Type=PayDeptReportForm)" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="(@1 @4 Type=RatePayingDeclarationReportForm)" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@11" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@12" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@13" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@14" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@15" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@16" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@17" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@18" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@19" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@20" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@21" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@22" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@23" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@24" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@25" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@26" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@29" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@30" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@31" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@32" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@33" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@34" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@35" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@36" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@37" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@38" Category="Contains" FetchingParent="@5" />
+    <Link Source="@58" Target="@42" Category="CodeSchema_FunctionPointer" Bounds="-299.540165221357,573.038070062837,238.331381818326,248.787187559254" Weight="1" />
+    <Link Source="@58" Target="@44" Category="CodeSchema_FunctionPointer" Bounds="27.0487350671624,562.982923396198,82.5904764354147,3.11632561705062" Weight="1" />
+    <Link Source="@58" Target="@45" Category="CodeSchema_FunctionPointer" Bounds="-40.2502566447338,573.038070062837,171.385561567945,257.950989703221" Weight="1" />
+    <Link Source="@58" Target="@46" Category="CodeSchema_FunctionPointer" Bounds="9.83513641357422,573.0380859375,189.176963806152,77.1265869140625" Weight="1" />
+    <Link Source="@58" Target="@47" Category="CodeSchema_FunctionPointer" Bounds="-34.9429054260254,573.0380859375,278.526203155518,135.940612792969" Weight="1" />
+    <Link Source="@58" Target="@48" Category="CodeSchema_FunctionPointer" Bounds="-274.054743649175,276.886649998346,214.948970464971,270.314720731158" Weight="1" />
+    <Link Source="@58" Target="@50" Category="CodeSchema_FieldRead" Bounds="-258.753557341251,573.038070062837,183.14725083693,88.3712873803248" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@51" Category="CodeSchema_FieldRead" Bounds="-64.927848815918,198.049163818359,38.2690525054932,349.152191162109" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@52" Category="CodeSchema_FieldRead" Bounds="-173.863571884712,560.119298571524,49.1481276185408,0.000165815048717377" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@53" Category="CodeSchema_FieldRead" Bounds="-47.2088586985146,359.994284680861,23.5414856982049,187.207086048643" Weight="7">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@55" Category="CodeSchema_FieldRead" Bounds="-34.5404317581957,573.038070062837,148.524786971357,134.240921438256" Weight="14">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@56" Category="CodeSchema_FieldRead" Bounds="-22.5825617416394,470.464487934391,155.933541573855,76.7368827951128" Weight="12">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@57" Category="CodeSchema_FieldRead" Bounds="-129.575697648236,334.154409386081,76.1263344421585,213.046961343423" Weight="11">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@59" Category="CodeSchema_FieldRead" Bounds="-243.884958140683,434.63919088282,174.970840195971,112.562179846684" Weight="14">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@60" Category="CodeSchema_FieldRead" Bounds="-69.5958786010742,573.0380859375,19.1468467712402,353.317565917969" Weight="16">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@62" Category="CodeSchema_FieldRead" Bounds="-147.143353216583,573.038070062837,92.0923651804084,191.339902415993" Weight="9">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@63" Category="CodeSchema_FieldRead" Bounds="-297.716849912922,524.030663572656,173.193763244081,25.1137567612626" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@64" Category="CodeSchema_FieldRead" Bounds="-44.6633573026719,303.792679925628,78.5714591157679,243.408690803876" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@65" Category="CodeSchema_FieldRead" Bounds="-20.5853976755834,573.038070062837,75.8389304953903,34.6826436023003" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@66" Category="CodeSchema_FieldRead" Bounds="-47.4208148371102,573.038070062837,24.1101120746272,220.498471317123" Weight="8">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@58" Target="@67" Category="CodeSchema_FieldRead" Bounds="-317.4208984375,573.0380859375,201.151222229004,8.55108642578125" Weight="10">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@7" Target="@8" Category="InheritsFrom" Bounds="188.734686144222,1512.69313058843,70.0652228502127,27.6341428948965" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="13">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_FieldRead" />
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@9" Target="@10" Category="CodeSchema_Calls" Bounds="132.745906918171,1397.71749522805,55.8170905933528,26.1784919898598" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@9" Target="@3" Category="InheritsFrom" Bounds="150.021046209558,1346.40210502489,43.8520326269588,25.4787235364927" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="72">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_FieldRead" />
+    </Link>
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="程序集" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="程序集" />
+    <Category Id="CodeSchema_Calls" Label="调用" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="调用者" OutgoingActionLabel="调用" />
+    <Category Id="CodeSchema_Class" Label="类" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="类" />
+    <Category Id="CodeSchema_Field" Label="字段" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="字段" />
+    <Category Id="CodeSchema_FieldRead" Label="字段读取" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="读取方" OutgoingActionLabel="读取字段" />
+    <Category Id="CodeSchema_FieldReference" Label="字段引用" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="引用方" OutgoingActionLabel="引用字段" />
+    <Category Id="CodeSchema_FieldWrite" Label="字段写入" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="写入方" OutgoingActionLabel="写入字段" />
+    <Category Id="CodeSchema_FunctionPointer" Label="函数指针" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="函数指针" OutgoingActionLabel="函数指针" />
+    <Category Id="CodeSchema_Member" Label="编号" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="成员" />
+    <Category Id="CodeSchema_Method" Label="方法" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="方法" />
+    <Category Id="CodeSchema_Namespace" Label="命名空间" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="命名空间" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="返回" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="返回类型" OutgoingActionLabel="返回类型" />
+    <Category Id="CodeSchema_Type" Label="类型" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="类型" />
+    <Category Id="Contains" Label="包含" Description="链接的源是否包含目标对象" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="包含者" IsContainment="True" OutgoingActionLabel="包含" />
+    <Category Id="File" Label="文件" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="文件" />
+    <Category Id="InheritsFrom" Label="继承自" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="继承者" OutgoingActionLabel="继承自" />
+    <Category Id="References" Label="引用" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="引用者" OutgoingActionLabel="引用" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsAbstract" Label="是抽象的" Description="一个标志，用于指示该成员是“抽象”成员且不提供完整实现" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="是构造函数" Description="一个标志，用于指示该方法是构造函数" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="是最终的" Description="一个标志，用于指示该成员是“最终”成员且不能从其派生" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsInternal" Label="是内部的" Description="一个标志，用于指示该方法是“内部”方法" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="是私有的" Description="一个标志，用于指示该范围是“私有”范围" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="是受保护的" Description="一个标志，用于指示该范围是“受保护”范围" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="是公共的" Description="一个标志，用于指示该范围是“公共”范围" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsSpecialName" Label="是特殊名称" Description="一个标志，用于指示某些编译器以特殊方式对待该方法" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsVirtual" Label="是虚拟的" Description="一个标志，用于指示可以重写该方法" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="已虚拟化数据" Description="如果为 true，则图中可以包含表示虚拟化节点/链接(即，不在图中实际创建)的数据的节点和链接。" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="延迟的子节点状态" Description="如果未指定延迟的子节点状态，则为 Unspecified。如果尚未将组包含的子节点提取到关系图中，则为 NotFetched。如果已提取组内的所有延迟的子节点，则为 Fetched。" DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="延迟的跨组链接状态" Description="如果未指定延迟的跨组链接状态，则为 Unspecified。如果尚未将此节点上延迟的跨组链接提取到关系图中，则为 NotFetched。如果已提取所有延迟的跨组链接，则为 Fetched。" DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="文件路径" Description="文件路径" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="组" Description="将节点显示为组" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="图标" Description="图标" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="已虚拟化链接源" Description="如果为 true，则链接源端包含虚拟化节点/链接(即，不在图中实际创建)的数据。" DataType="System.Boolean" />
+    <Property Id="IsTargetVirtualized" Label="已虚拟化链接目标" Description="如果为 true，则链接目标端包含虚拟化节点/链接(即，不在图中实际创建)的数据。" DataType="System.Boolean" />
+    <Property Id="Label" Label="标签" Description="可批注对象的可显示标签" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Weight" Label="粗细" Description="粗细" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="程序集" ValueType="Uri" />
+    <Name Id="Member" Label="编号" ValueType="System.Object" />
+    <Name Id="Name" Label="名称" ValueType="System.String" />
+    <Name Id="Namespace" Label="命名空间" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="参数" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="类型" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(99fac269-d907-4130-8ec6-c61f34b2a2de.OutputPathUri)" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Id="(@1 Namespace=Hwagain.Common)" />
+    <Alias n="4" Id="Namespace=Hwagain.SalaryCalculation" />
+    <Alias n="5" Id="(@1 @4)" />
+    <Alias n="6" Id="(@1 Namespace=Hwagain.SalaryCalculation.Components.Common)" />
+    <Alias n="7" Id="(@1 Namespace=Hwagain.SalaryCalculation.Components.PrintViews)" />
+    <Alias n="8" Id="(@1 Namespace=Hwagain.SalaryCalculation.Components.UserControls)" />
+    <Alias n="9" Id="(@1 Namespace=Hwagain.SalaryCalculation.Forms)" />
+    <Alias n="10" Id="(@1 Namespace=Hwagain.SalaryCalculation.Modules)" />
+    <Alias n="11" Id="(@1 @4 Type=AdjustPersonPayRateOrderForm)" />
+    <Alias n="12" Id="(@1 @4 Type=EditPersonPayRateForm)" />
+    <Alias n="13" Id="(@1 @4 Type=EditPersonPayRateForm4Check)" />
+    <Alias n="14" Id="(@1 @4 Type=EmpPayRateForm)" />
+    <Alias n="15" Id="(@1 @4 Type=FormSystemManage)" />
+    <Alias n="16" Id="(@1 @4 Type=ImportEmpPayRateForm)" />
+    <Alias n="17" Id="(@1 @4 Type=ImportOtherMoneyForm)" />
+    <Alias n="18" Id="(@1 @4 Type=MainForm)" />
+    <Alias n="19" Id="(@1 @4 Type=ManageActions)" />
+    <Alias n="20" Id="(@1 @4 Type=ManageGradeImpowers)" />
+    <Alias n="21" Id="(@1 @4 Type=ManageImpowers)" />
+    <Alias n="22" Id="(@1 @4 Type=ManagePayGroupImpowers)" />
+    <Alias n="23" Id="(@1 @4 Type=ManagePrivileges)" />
+    <Alias n="24" Id="(@1 @4 Type=ManageResources)" />
+    <Alias n="25" Id="(@1 @4 Type=ManageRoles)" />
+    <Alias n="26" Id="(@1 @4 Type=ManageUserInRole)" />
+    <Alias n="27" Id="Type=ManageUsers" />
+    <Alias n="28" Id="(@1 @4 @27)" />
+    <Alias n="29" Id="(@1 @4 Type=OtherMoneyForm)" />
+    <Alias n="30" Id="(@1 @4 Type=PayBankReportForm)" />
+    <Alias n="31" Id="(@1 @4 Type=PayCheckForm)" />
+    <Alias n="32" Id="(@1 @4 Type=PayReportForm)" />
+    <Alias n="33" Id="(@1 @4 Type=PersonPayRateList)" />
+    <Alias n="34" Id="(@1 @4 Type=Program)" />
+    <Alias n="35" Id="(@1 @4 Type=PublicPayCategoryDetailReportForm)" />
+    <Alias n="36" Id="(@1 @4 Type=PublicPayReportForm)" />
+    <Alias n="37" Id="(@1 @4 Type=SearchEmployeeInfoForm)" />
+    <Alias n="38" Id="(@1 @4 Type=ViewLog)" />
+    <Alias n="39" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/mscorlib.dll" />
+    <Alias n="40" Id="(@1 @4 @27 Member=(Name=Dispose OverloadingParameters=[(@39 Namespace=System Type=Boolean)]))" />
+    <Alias n="41" Uri="Assembly=$(ProgramFilesUri)/DevExpress 14.1/Components/Bin/Framework/DevExpress.XtraGrid.v14.1.dll" />
+    <Alias n="42" Id="(@1 @4 @27 Member=(Name=gridView2_CustomColumnDisplayText OverloadingParameters=[(@39 Namespace=System Type=Object),(@41 Namespace=DevExpress.XtraGrid.Views.Base Type=CustomColumnDisplayTextEventArgs)]))" />
+    <Alias n="43" Id="OverloadingParameters=[(@39 Namespace=System Type=Object),(@39 Namespace=System Type=EventArgs)]" />
+    <Alias n="44" Id="(@1 @4 @27 Member=(Name=btnAdd_Click @43))" />
+    <Alias n="45" Id="(@1 @4 @27 Member=(Name=btnChangePassword_Click @43))" />
+    <Alias n="46" Id="(@1 @4 @27 Member=(Name=btnDelete_Click @43))" />
+    <Alias n="47" Id="(@1 @4 @27 Member=(Name=ManageUsers_Load @43))" />
+    <Alias n="48" Id="(@1 @4 @27 Member=(Name=gridView1_InitNewRow OverloadingParameters=[(@39 Namespace=System Type=Object),(@41 Namespace=DevExpress.XtraGrid.Views.Grid Type=InitNewRowEventArgs)]))" />
+    <Alias n="49" Id="(@1 @4 @27 Member=.ctor)" />
+    <Alias n="50" Id="(@1 @4 @27 Member=btnAdd)" />
+    <Alias n="51" Id="(@1 @4 @27 Member=btnChangePassword)" />
+    <Alias n="52" Id="(@1 @4 @27 Member=btnDelete)" />
+    <Alias n="53" Id="(@1 @4 @27 Member=col姓名)" />
+    <Alias n="54" Id="(@1 @4 @27 Member=components)" />
+    <Alias n="55" Id="(@1 @4 @27 Member=gridControl1)" />
+    <Alias n="56" Id="(@1 @4 @27 Member=gridView1)" />
+    <Alias n="57" Id="(@1 @4 @27 Member=gridView2)" />
+    <Alias n="58" Id="(@1 @4 @27 Member=InitializeComponent)" />
+    <Alias n="59" Id="(@1 @4 @27 Member=panel2)" />
+    <Alias n="60" Id="(@1 @4 @27 Member=repositoryItemDateEdit1)" />
+    <Alias n="61" Id="(@1 @4 @27 Member=UserList)" />
+    <Alias n="62" Id="(@1 @4 @27 Member=创建时间)" />
+    <Alias n="63" Id="(@1 @4 @27 Member=身份证号码)" />
+    <Alias n="64" Id="(@1 @4 @27 Member=姓名)" />
+    <Alias n="65" Id="(@1 @4 @27 Member=用户名)" />
+    <Alias n="66" Id="(@1 @4 @27 Member=邮箱地址)" />
+    <Alias n="67" Id="(@1 @4 @27 Member=最后登录时间)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="程序集" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="命名空间" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="接口" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="结构" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="枚举" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="委托" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="类" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="属性" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="方法" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Method')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="事件" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="字段" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="外部" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="99fac269-d907-4130-8ec6-c61f34b2a2de.OutputPath" Value="E:\Projects\Vs.Net WinForms Projects\算薪专用模块\算薪专用模块\bin\Debug\SalaryCalculation.exe" />
+    <Path Id="99fac269-d907-4130-8ec6-c61f34b2a2de.OutputPathUri" Value="file:///E:/Projects/Vs.Net WinForms Projects/算薪专用模块/算薪专用模块/bin/Debug/SalaryCalculation.exe" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files/Reference Assemblies/Microsoft/Framework" />
+    <Path Id="ProgramFilesUri" Value="file:///C:/Program Files" />
+  </Paths>
+</DirectedGraph>

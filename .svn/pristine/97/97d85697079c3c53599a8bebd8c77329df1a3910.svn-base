@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://10.0.205.31/SalaryCalculation/|http://lgc.hwagain.com/SalaryCalculation/|http://192.168.68.208/SalaryCalculation/|http://10.0.207.100/SalaryCalculation/|http://192.168.68.80/SalaryCalculation/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://192.168.68.80/SalaryCalculation/|http://192.168.68.68/SalaryCalculation/|http://192.168.68.118/Update/SalaryCalculation/</UpdateUrlHistory>
+    <BootstrapperUrlHistory>http://192.168.68.208/Download/DotNetFX40/dotNetFx40LP_Full_x86_x64zh-Hans.exe</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

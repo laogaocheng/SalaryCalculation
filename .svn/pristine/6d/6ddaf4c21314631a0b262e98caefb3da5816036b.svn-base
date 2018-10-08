@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="gb2312"?>
+<configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+  </configSections>
+  <log4net debug="false">
+    <appender name="LogFileAppender" type="log4net.Appender.FileAppender">
+      <param name="File" value="LogFiles\log-info.txt" />
+      <param name="datePattern" value="yyyy-MM-dd HH:mm" />
+      <param name="AppendToFile" value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="DEBUG" />
+        <param name="LevelMax" value="WARN" />
+      </filter>
+    </appender>
+    <appender name="HttpTraceAppender" type="log4net.Appender.ASPNetTraceAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n" />
+      </layout>
+    </appender>
+    <appender name="EventLogAppender" type="log4net.Appender.EventLogAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n" />
+      </layout>
+    </appender>
+    <appender name="RollingLogFileAppenderError" type="log4net.Appender.RollingFileAppender">
+      <param name="Header" value="日志开始%n" />
+      <param name="Footer" value="日志结束%n" />
+      <param name="File" value="LogFiles\log-error-" />
+      <param name="AppendToFile" value="true" />
+      <param name="MaxSizeRollBackups" value="10" />
+      <param name="MaximumFileSize" value="5MB" />
+      <param name="RollingStyle" value="Size" />
+      <param name="StaticLogFileName" value="false" />
+      <param name="DatePattern" value="yyyyMM'.txt'" />
+      <param name="RollingStyle" value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="WARN" />
+        <param name="LevelMax" value="FATAL" />
+      </filter>
+    </appender>
+    <appender name="RollingLogFileAppenderDebug" type="log4net.Appender.RollingFileAppender">
+      <param name="Header" value="日志开始%n" />
+      <param name="Footer" value="日志结束%n" />
+      <param name="File" value="LogFiles\log-info-" />
+      <param name="AppendToFile" value="true" />
+      <param name="MaxSizeRollBackups" value="10" />
+      <param name="MaximumFileSize" value="5MB" />
+      <param name="RollingStyle" value="Size" />
+      <param name="StaticLogFileName" value="false" />
+      <param name="DatePattern" value="yyyyMM'.txt'" />
+      <param name="RollingStyle" value="Date" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c - %m%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <param name="LevelMin" value="DEBUG" />
+        <param name="LevelMax" value="INFO" />
+      </filter>
+    </appender>
+    <appender name="UdpAppender" type="log4net.Appender.UdpAppender">
+      <param name="RemoteAddress" value="localhost" />
+      <param name="RemotePort" value="8081" />
+        <layout type="log4net.Layout.PatternLayout" value="{%level}%date{MM/dd HH:mm:ss} - %message" />        
+    </appender>
+    <root>
+      <level value="ALL" />
+      <!--如果需要调试，请选择 UdpAppender 或者 RollingLogFileAppenderDebug，UdpAppender 可以一直打开，为了节省磁盘控件，RollingLogFileAppenderDebug 应该在必要时才启用-->
+      <appender-ref ref="RollingLogFileAppenderDebug" />
+      <appender-ref ref="UdpAppender" />
+      <appender-ref ref="RollingLogFileAppenderError" />
+    </root>
+  </log4net>  
+</configuration>

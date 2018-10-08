@@ -1,0 +1,37 @@
+会员_等级
+    职务等级 -> 工资职等
+    公司编码 -> 公司名称
+
+会员_部门_录入  会员_部门
+    可查公司编码 ->可查公司名称
+
+管培生_综合能力评定_录入
+    增加 年度 字段，int
+
+管培生_提资标准_录入
+    增加 第一阶段起薪  decimal(6,2)
+         第二阶段起薪  decimal(6,2)
+	 增幅1  decimal(6,2)
+...
+         增幅12 decimal(6,2)
+         第二阶段增幅1   decimal(6,2)
+         第二阶段增幅2   decimal(6,2)
+
+    删除 [增幅] [decimal](8, 2) NULL,
+	 [年薪] [decimal](8, 2) NULL,
+
+管培生_基本信息_录入
+    增加 序号 字段，int
+
+管培生_工资标准_录入 管培生_工资标准
+    增加 提资序数 字段，int
+
+工资表
+    增加 
+    报账工资标准	money	Checked
+    福利借款标准	money	Checked
+    契约津贴标准	money	Checked
+    薪资奖励_月摊	money	Checked
+    月应发工资	money	Checked
+    工资借款标准	money	Checked
+

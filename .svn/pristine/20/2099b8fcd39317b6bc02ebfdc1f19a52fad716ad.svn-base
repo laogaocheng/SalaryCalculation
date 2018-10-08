@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+  <connectionStrings>
+    <add name="ConnectionString1" connectionString="server=192.168.65.99;database=专用算薪系统;uid=sa;pwd=;Max Pool Size=10000" providerName="System.Data.SqlClient" />
+    <add name="ConnectionString" connectionString="Server=192.168.68.110;Database=专用算薪系统;uid=gongztb;pwd=server;Max Pool Size=10000" providerName="System.Data.SqlClient" />
+    <add name="PSConnectionString" connectionString="provider=OraOLEDB.Oracle;Persist Security Info=False;User ID=inf_reader;Data Source=192.168.68.123/HCPRD;Extended Properties='';Password=L43fads1" providerName="System.Data.OleDb" />
+    <add name="PSConnectionString1" connectionString="provider=OraOLEDB.Oracle;Persist Security Info=False;User ID=SYSADM;Data Source=192.168.68.102/HCSIT;Extended Properties='';Password=SYSADM" providerName="System.Data.OleDb" />
+  </connectionStrings>
+</configuration>

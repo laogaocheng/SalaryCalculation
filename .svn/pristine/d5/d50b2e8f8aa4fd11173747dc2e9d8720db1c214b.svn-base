@@ -1,0 +1,408 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DevExpress.Xpo;
+using DevExpress.Data.Filtering;
+using DevExpress.Xpo.DB;
+using log4net;
+using Hwagain.Components;
+using System.Data.SqlClient;
+
+namespace Hwagain.SalaryCalculation.Components
+{
+    public partial class WageLoan
+    {
+        static readonly ILog log = LogManager.GetLogger(typeof(WageLoan));
+        public static ICache<string, WageLoan> WAGELOAN_CACHE = MemoryCache<string, WageLoan>.Instance;
+
+        #region GetWageLoan
+
+        public static WageLoan GetWageLoan(Guid id)
+        {
+            WageLoan obj = (WageLoan)Session.DefaultSession.GetObjectByKey(typeof(WageLoan), id);
+            return obj;
+        }
+
+        public static WageLoan GetWageLoan(string emplid, DateTime effDate)
+        {
+            GroupOperator criteria = new GroupOperator(GroupOperatorType.And,
+                       new BinaryOperator("员工编号", emplid, BinaryOperatorType.Equal),
+                       new BinaryOperator("开始时间", effDate, BinaryOperatorType.Equal)
+                       );
+
+            XPCollection objset = new XPCollection(typeof(WageLoan), criteria, new SortProperty("开始时间", SortingDirection.Descending));
+
+            if (objset.Count > 0)
+            {
+                return (WageLoan)objset[0];
+            }
+            else
+                return null;
+        }
+
+        #endregion
+
+        #region GetFromCache
+
+        public static WageLoan GetFromCache(string emplid, DateTime effDate)
+        {
+            string key = emplid + "$$" + effDate;
+            return WAGELOAN_CACHE.Get(key, () => GetWageLoan(emplid, effDate), TimeSpan.FromHours(1));                
+        }
+        #endregion
+
+        #region GetEffective
+
+        //获取指定员工指定时间执行的标准
+        public static WageLoan GetEffective(string emplid, DateTime date)
+        {
+            GroupOperator criteria = new GroupOperator(GroupOperatorType.And,
+                       new BinaryOperator("员工编号", emplid, BinaryOperatorType.Equal),
+                       new BinaryOperator("开始时间", date.Date, BinaryOperatorType.LessOrEqual),
+                       new BinaryOperator("结束时间", date.Date, BinaryOperatorType.GreaterOrEqual)
+                       );
+
+            XPCollection objset = new XPCollection(MyHelper.XpoSession, typeof(WageLoan), criteria, new SortProperty("开始时间", SortingDirection.Descending));
+
+            if (objset.Count > 0)
+            {
+                return (WageLoan)objset[0];
+            }
+            else
+                return null;
+        }
+
+        #endregion
+
+        #region GetEffectiveWageLoans
+        public static List<WageLoan> GetEffectiveWageLoans()
+        {
+            return GetWageLoans(null, false);
+        }
+
+        #endregion
+
+        #region GetWageLoans
+
+        public static List<WageLoan> GetWageLoans(string emplid, bool includeHistory)
+        {
+            List<WageLoan> list = new List<WageLoan>();
+
+            GroupOperator criteria = new GroupOperator(GroupOperatorType.And);
+
+            if (!string.IsNullOrEmpty(emplid)) criteria.Operands.Add(new BinaryOperator("员工编号", emplid, BinaryOperatorType.Equal));
+            if (includeHistory == false)
+            {
+                criteria.Operands.Add(new BinaryOperator("结束时间", DateTime.Today, BinaryOperatorType.GreaterOrEqual));
+            }
+
+            XPCollection objset = new XPCollection(typeof(WageLoan), criteria, new SortProperty("开始时间", SortingDirection.Ascending));
+
+            foreach (WageLoan ms in objset)
+            {
+                list.Add(ms);                
+            }
+            return list;
+        }
+        //获取区间内执行的标准
+        public static List<WageLoan> GetWageLoans(int year, int month)
+        {
+            DateTime start = new DateTime(year, month, 1);
+            DateTime end = start.AddMonths(1).AddDays(-1);
+            List<WageLoan> list = new List<WageLoan>();
+
+            GroupOperator criteria = new GroupOperator(GroupOperatorType.And);
+            criteria.Operands.Add(new BinaryOperator("开始时间", end.Date, BinaryOperatorType.LessOrEqual));
+            criteria.Operands.Add(new BinaryOperator("结束时间", start.Date, BinaryOperatorType.GreaterOrEqual));
+
+            XPCollection objset = new XPCollection(typeof(WageLoan), criteria, new SortProperty("开始时间", SortingDirection.Ascending));
+
+            foreach (WageLoan ms in objset)
+            {
+                list.Add(ms);
+            }
+            return list;
+        }
+
+        #endregion
+
+        #region AutoGenerateMonthlyWageLoanItems
+
+        //自动创建借款记录
+        public static List<MonthlyWageLoanItem> AutoGenerateMonthlyWageLoanItems(int year, int month)
+        {
+            List<MonthlyWageLoanItem> list = new List<MonthlyWageLoanItem>();
+            //获取正在执行的借款标准
+            //2018-9-13 部分员工可能会有多条执行标准，查询结果按开始时间先后排序，执行的原则是新的标准会替代旧的标准，所以实际会计算多次，后计算的覆盖旧的
+            List<WageLoan> wageLoanList = GetWageLoans(year, month);
+            foreach (WageLoan wl in wageLoanList)
+            {
+                SalaryResult sr = SalaryResult.GetFromCache(wl.员工编号, year, month);
+                //如果已经发上表工资
+                if (sr != null)
+                {
+                    if (sr.企业排班天数 == 0) continue;
+
+                    MonthlyWageLoanItem item = MonthlyWageLoanItem.AddMonthlyWageLoanItem(wl.员工编号, year, month);
+                    item.姓名 = sr.姓名;
+                    item.约定税率 = wl.约定税率;
+                    item.月借款标准 = wl.月借款额度;
+                    item.应出勤天数 = sr.企业排班天数;
+                    item.实际出勤天数 = sr.实际出勤天数;
+                    item.实际借款金额 = Math.Round(wl.月借款额度 * (sr.实际出勤天数 / sr.企业排班天数), 2);
+                    item.代缴个税 = Math.Round(item.实际借款金额 * wl.约定税率 * (decimal)0.01);
+                    item.税后实发金额 = item.实际借款金额 - item.代缴个税;
+                    item.Save();
+
+                    list.Add(item);
+                }
+            }
+            return list;
+        }
+        #endregion
+
+        #region AddWageLoan
+
+        public static WageLoan AddWageLoan(string emplid, DateTime effDate)
+        {
+            WageLoan item = GetWageLoan(emplid, effDate);
+            if (item == null)
+            {
+                item = new WageLoan();
+                item.标识 = Guid.NewGuid();
+                item.员工编号 = emplid;
+                item.开始时间 = effDate;
+                item.创建人 = AccessController.CurrentUser.姓名;
+                item.创建时间 = DateTime.Now;
+                item.Save();
+            }
+            return item;
+        }
+        #endregion
+
+        #region OnSaving
+
+        protected override void OnSaving()
+        {
+            WageLoan found = GetWageLoan(this.员工编号, this.开始时间);
+            if (found != null && found.标识 != this.标识)
+                throw new Exception("已存在该员工的相同借款记录，不能重复创建。");
+            else
+                base.OnSaving();
+
+            WAGELOAN_CACHE.Set(CacheKey, this, TimeSpan.FromHours(1));
+        }
+        #endregion
+
+        #region OnDeleting
+
+        protected override void OnDeleting()
+        {
+            base.OnDeleting();
+            WAGELOAN_CACHE.Remove(CacheKey);
+        }
+        #endregion
+
+        #region OnDeleted
+        protected override void OnDeleted()
+        {
+            base.OnDeleted();
+        }
+        #endregion
+
+        #region OnLoaded
+
+        protected override void OnLoaded()
+        {
+            AutoSaveOnEndEdit = false; //关闭自动保存的开关
+            //缓存
+            WAGELOAN_CACHE.Set(this.CacheKey, this, TimeSpan.FromHours(1));
+            base.OnLoaded();
+        }
+        #endregion
+
+        #region CacheKey
+
+        string CacheKey
+        {
+            get { return this.员工编号 + "$$" + this.开始时间; }
+        }
+
+        #endregion
+
+        #region 员工信息
+
+        EmployeeInfo empInfo = null;
+        [NonPersistent]
+        public EmployeeInfo 员工信息
+        {
+            get
+            {
+                if (empInfo == null) empInfo = EmployeeInfo.GetEmployeeInfo(this.员工编号);
+                return empInfo;
+            }
+            set { empInfo = value; }
+        }
+        #endregion
+
+        #region 部门
+
+        public string 部门
+        {
+            get
+            {
+                if (员工信息 != null)
+                {
+                    return 员工信息.部门名称;
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region 姓名
+
+        public string 姓名
+        {
+            get
+            {
+                if (员工信息 != null)
+                {
+                    return 员工信息.姓名;
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region 性别
+
+        public string 性别
+        {
+            get
+            {
+                if (员工信息 != null)
+                {
+                    return 员工信息.性别;
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region 职务
+
+        public string 职务
+        {
+            get
+            {
+                if (员工信息 != null)
+                {
+                    return 员工信息.职务名称;
+                }
+                return null;
+            }
+        }
+
+        #endregion        
+
+        #region 职等
+
+        public string 职等
+        {
+            get
+            {
+                if (员工信息 != null)
+                {
+                    return 员工信息.职等;
+                }
+                return null;
+            }
+        }
+
+        #endregion
+
+        #region 执行状态
+        public string 执行状态
+        {
+            get
+            {
+                if (DateTime.Today < 开始时间)
+                    return "未生效";
+                else
+                {
+                    if (DateTime.Today > 结束时间)
+                        return "已失效";
+                    else
+                        return "执行中";
+                }
+            }
+        }
+        #endregion
+
+        #region 发放明细表
+        List<MonthlyWageLoanItem> items = null;
+        public List<MonthlyWageLoanItem> 发放明细表
+        {
+            get
+            {
+                if(items == null)
+                {
+                    items = MonthlyWageLoanItem.GetMonthlyWageLoanItems(员工编号);
+                    items = items.FindAll(a => a.期间开始 >= 开始时间 && a.期间开始 < 结束时间);
+                    items = items.OrderBy(a => a.期间开始).ToList();
+                }
+                return items;
+            }
+        }
+        #endregion
+
+        #region 累计实发借款金额
+
+        public decimal 累计实发借款金额
+        {
+            get
+            {
+                return 发放明细表.Sum(a => a.税后实发金额);
+            }
+        }
+        #endregion
+
+        #region 已执行年限
+
+        public int 已执行年限
+        {
+            get
+            {
+                return 发放明细表.Count;
+            }
+        }
+        #endregion
+
+        #region 月均实际借款金额
+
+        public decimal 月均实际借款金额
+        {
+            get
+            {
+                if (已执行年限 > 0)
+                    return 累计实发借款金额 / 已执行年限;
+                else
+                    return 0;
+            }
+        }
+
+        #endregion
+
+        #region 查看明细按钮文字
+        public string 查看明细按钮文字
+        {
+            get { return "查看明细"; }
+        }
+        #endregion
+    }
+}

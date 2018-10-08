@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA370FDA-1BC6-4D12-9478-B34F8FEC665E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hwagain.SalaryCalculation.Components</RootNamespace>
+    <AssemblyName>Components</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>I:\DLL\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackHen.Threading">
+      <HintPath>I:\DLL\BlackHen.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoHelper">
+      <HintPath>I:\DLL\CryptoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Hwagain.CommLib">
+      <HintPath>I:\DLL\Hwagain.CommLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>I:\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SSO">
+      <HintPath>I:\DLL\SSO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YiKang.RBACS">
+      <HintPath>I:\DLL\YiKang.RBACS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessController.cs" />
+    <Compile Include="CacheHelper.cs" />
+    <Compile Include="ChineseGridLocalizer.cs" />
+    <Compile Include="EncodeStyle.cs" />
+    <Compile Include="Entities\BaseData.cs" />
+    <Compile Include="Entities\DeptIndex.cs" />
+    <Compile Include="Entities\ManagementTraineeAbilityInput.cs" />
+    <Compile Include="Entities\ManagementSpecialtyPropertyInput.cs" />
+    <Compile Include="Entities\ManagementSpecialtyProperty.cs" />
+    <Compile Include="Entities\ManagementTraineeAbility.cs" />
+    <Compile Include="Entities\ManagementTraineePayRiseStandard.cs" />
+    <Compile Include="Entities\ManagementTraineePayRiseStandardInput.cs" />
+    <Compile Include="Entities\ManagementTraineeInfoInput.cs" />
+    <Compile Include="Entities\ManagementTraineeInfo.cs" />
+    <Compile Include="Entities\EmpPayRate.cs" />
+    <Compile Include="Entities\ManagementTraineePayStandard.cs" />
+    <Compile Include="Entities\ContractAllowance.cs" />
+    <Compile Include="Entities\ManagementTraineePayStandardInput.cs" />
+    <Compile Include="Entities\MonthlyContractAllowanceItem.cs" />
+    <Compile Include="Entities\MonthlyWageLoanItemEntry.cs" />
+    <Compile Include="Entities\MonthlyWageLoanItem.cs" />
+    <Compile Include="Entities\RembursementSalary.cs" />
+    <Compile Include="Entities\RembursementSalaryEntry.cs" />
+    <Compile Include="Entities\MonthlyRembursementSalaryItem.cs" />
+    <Compile Include="Entities\MonthlyRembursementSalaryItemEntry.cs" />
+    <Compile Include="Entities\ContractAllowanceEntry.cs" />
+    <Compile Include="Entities\WageLoanEntry.cs" />
+    <Compile Include="Entities\WageLoan.cs" />
+    <Compile Include="Entities\SalaryStructure.cs" />
+    <Compile Include="Entities\SalaryStructureEntry.cs" />
+    <Compile Include="Entities\MemberGrade.cs" />
+    <Compile Include="Entities\MemberDeptInput.cs" />
+    <Compile Include="Entities\MemberDept.cs" />
+    <Compile Include="Entities\SalaryNode.cs" />
+    <Compile Include="Entities\PrivateSalary.cs" />
+    <Compile Include="Entities\OtherMoney.cs" />
+    <Compile Include="Entities\SalaryAuditingResult.cs" />
+    <Compile Include="Entities\PersonPayRateInputGroup.cs" />
+    <Compile Include="Entities\PersonPayRateInput.cs" />
+    <Compile Include="Entities\StepPayRate.cs" />
+    <Compile Include="Entities\PayRateInputGroup.cs" />
+    <Compile Include="Entities\PayRateInput.cs" />
+    <Compile Include="Entities\PersonPayRate.cs" />
+    <Compile Include="Entities\SalaryStep.cs" />
+    <Compile Include="Entities\RoleGrade.cs" />
+    <Compile Include="Entities\RolePayGroup.cs" />
+    <Compile Include="Entities\SalaryResult.cs" />
+    <Compile Include="Entities\SalaryResultItem.cs" />
+    <Compile Include="Entities\EmployeeInfo.cs" />
+    <Compile Include="Entities\SalaryGrade.cs" />
+    <Compile Include="Entities\SalaryPlan.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\NumberInfo.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\ModifyLog.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\TypeDefine.cs" />
+    <Compile Include="Entities\UserInRole.cs" />
+    <Compile Include="Entities\PayCheckRecord.cs" />
+    <Compile Include="Entities\EmpSalaryStep.cs" />
+    <Compile Include="Entities\EmpSalaryStepInput.cs" />
+    <Compile Include="Entities\EmpSalaryStepInputGroup.cs" />
+    <Compile Include="Entities\ReimbursementStandard.cs" />
+    <Compile Include="Entities\ReimbursementStandardInput.cs" />
+    <Compile Include="Entities\ReimbursementStandardInputGroup.cs" />
+    <Compile Include="Entities\PersonBorrow.cs" />
+    <Compile Include="Entities\PersonBorrowInput.cs" />
+    <Compile Include="Entities\PersonBorrowInputGroup.cs" />
+    <Compile Include="Entities\PerformanceSalary.cs" />
+    <Compile Include="Entities\PerformanceSalaryInput.cs" />
+    <Compile Include="Entities\PerformanceSalaryInputGroup.cs" />
+    <Compile Include="Entities\EffectivePerformanceSalary.cs" />
+    <Compile Include="Entities\EffectivePerformanceSalaryInput.cs" />
+    <Compile Include="Entities\EffectivePerformanceSalaryInputGroup.cs" />
+    <Compile Include="Entities\PersonReimbursement.cs" />
+    <Compile Include="Entities\PersonReimbursementInput.cs" />
+    <Compile Include="Entities\PersonReimbursementInputGroup.cs" />
+    <Compile Include="Entities\PersonRepayment.cs" />
+    <Compile Include="Entities\DeptSystem.cs" />
+    <Compile Include="Entities\RoleLevel.cs" />
+    <Compile Include="Entities\LevelInfo.cs" />
+    <Compile Include="Entities\QueryLevel.cs" />
+    <Compile Include="Entities\QueryLevelInputGroup.cs" />
+    <Compile Include="Entities\QueryLevelInput.cs" />
+    <Compile Include="Entities\AuthorizeComputer.cs" />
+    <Compile Include="Entities\JobGrade.cs" />
+    <Compile Include="Entities\JobRank.cs" />
+    <Compile Include="Entities\RankSalaryStandard.cs" />
+    <Compile Include="Entities\RankSalaryStandardInput.cs" />
+    <Compile Include="Entities\MonthlySalary.cs" />
+    <Compile Include="Entities\MonthlySalaryInput.cs" />
+    <Compile Include="Entities\GradeSalaryAdjust.cs" />
+    <Compile Include="Entities\MonthlySalaryHistory.cs" />
+    <Compile Include="Entities\GradeSalaryAdjustInput.cs" />
+    <Compile Include="Entities\记录缺少情况.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FileCode.cs" />
+    <Compile Include="HookHelper.cs" />
+    <Compile Include="Interface\IDoubleManInput.cs" />
+    <Compile Include="KeyValue.cs" />
+    <Compile Include="Models\Developer.cs" />
+    <Compile Include="Models\EmployeeSalaryStructure.cs" />
+    <Compile Include="Models\ManagementTraineeSalaryStandard.cs" />
+    <Compile Include="Models\ManagementTraineeSalaryPlan.cs" />
+    <Compile Include="Models\ManagementTraineeYearlySalaryCalulator.cs" />
+    <Compile Include="Models\QueryPermission.cs" />
+    <Compile Include="Models\ManagementTraineeSalary.cs" />
+    <Compile Include="Models\WaiveAnnualVacation.cs" />
+    <Compile Include="Models\TraineeInfo.cs" />
+    <Compile Include="Models\EmployeeSalary.cs" />
+    <Compile Include="Models\KpiItem.cs" />
+    <Compile Include="Models\SaleEmployeeInfo.cs" />
+    <Compile Include="Models\TaxInfo.cs" />
+    <Compile Include="Models\PersonPayCounter.cs" />
+    <Compile Include="Models\PayCounter.cs" />
+    <Compile Include="Models\CompanyInfo.cs" />
+    <Compile Include="Models\CalRunInfo.cs" />
+    <Compile Include="Models\EmpPayRateData.cs" />
+    <Compile Include="Models\OtherMoneyData.cs" />
+    <Compile Include="Models\PayRate.cs" />
+    <Compile Include="Models\SalStep.cs" />
+    <Compile Include="Models\PayGroup.cs" />
+    <Compile Include="Models\SalResult.cs" />
+    <Compile Include="Models\DeptInfo.cs" />
+    <Compile Include="Models\SalResultItem.cs" />
+    <Compile Include="Models\EmpInfo.cs" />
+    <Compile Include="Models\SalGrade.cs" />
+    <Compile Include="Models\ElementInfo.cs" />
+    <Compile Include="Models\KpiInfo.cs" />
+    <Compile Include="Models\PersonalInfo.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\SalPlan.cs" />
+    <Compile Include="Models\PersonBankInfo.cs" />
+    <Compile Include="Models\ToBankReportItem.cs" />
+    <Compile Include="Models\PersonalTax.cs" />
+    <Compile Include="Models\SalaryChangedItem.cs" />
+    <Compile Include="Models\PayChangedItem.cs" />
+    <Compile Include="Models\EmployeePayData.cs" />
+    <Compile Include="Models\SalaryAdjustItem.cs" />
+    <Compile Include="Models\EmployeeSalaryData.cs" />
+    <Compile Include="Models\ImplementJobGrade.cs" />
+    <Compile Include="Models\SemiannualJobRank.cs" />
+    <Compile Include="Models\AdjustJobGrade.cs" />
+    <Compile Include="Models\AdjustJobRank.cs" />
+    <Compile Include="Models\SalaryCalculator.cs" />
+    <Compile Include="Models\DeptFunctionType.cs" />
+    <Compile Include="Models\MonitorLevel.cs" />
+    <Compile Include="ModifyField.cs" />
+    <Compile Include="MyHelper.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\部门排序.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\部门排序.Designer.cs">
+      <DependentUpon>部门排序.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\ManagementSpecialtyProperty.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\ManagementSpecialtyProperty.Designer.cs">
+      <DependentUpon>ManagementSpecialtyProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\ManagementSpecialtyPropertyInput.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\ManagementSpecialtyPropertyInput.Designer.cs">
+      <DependentUpon>ManagementSpecialtyPropertyInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_工资标准_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel3Code\Member.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel3Code\Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberDeptInput.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberDeptInput.Designer.cs">
+      <DependentUpon>MemberDeptInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberDept.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberDept.Designer.cs">
+      <DependentUpon>MemberDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberGrade.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel3Code\MemberGrade.Designer.cs">
+      <DependentUpon>MemberGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\EmpSalaryStep.cs" />
+    <Compile Include="PersistentClasses\EmpSalaryStepInput.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\KpiItem.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\KpiItem.Designer.cs">
+      <DependentUpon>KpiItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人报销.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人报销.Designer.cs">
+      <DependentUpon>个人报销.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人借款.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人借款.Designer.cs">
+      <DependentUpon>个人借款.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人借款_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人借款_录入.Designer.cs">
+      <DependentUpon>个人借款_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人报销_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人报销_录入.Designer.cs">
+      <DependentUpon>个人报销_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人还款.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\个人还款.Designer.cs">
+      <DependentUpon>个人还款.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\执行绩效工资.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\执行绩效工资.Designer.cs">
+      <DependentUpon>执行绩效工资.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\执行绩效工资_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\执行绩效工资_录入.Designer.cs">
+      <DependentUpon>执行绩效工资_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\报销标准.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\报销标准.Designer.cs">
+      <DependentUpon>报销标准.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\报销标准_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\报销标准_录入.Designer.cs">
+      <DependentUpon>报销标准_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\约定绩效工资.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\约定绩效工资.Designer.cs">
+      <DependentUpon>约定绩效工资.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel1Code\约定绩效工资_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\约定绩效工资_录入.Designer.cs">
+      <DependentUpon>约定绩效工资_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_基本信息.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_基本信息_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_工资标准.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_提资标准_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_提资标准.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_综合能力评定.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\管培生_综合能力评定_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资调整_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资调整_录入.Designer.cs">
+      <DependentUpon>职级工资调整_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细_历史.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细_历史.Designer.cs">
+      <DependentUpon>薪酬执行明细_历史.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资调整.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资调整.Designer.cs">
+      <DependentUpon>职级工资调整.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职等.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职等.Designer.cs">
+      <DependentUpon>职等.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级.Designer.cs">
+      <DependentUpon>职级.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资标准.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资标准.Designer.cs">
+      <DependentUpon>职级工资标准.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资标准_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\职级工资标准_录入.Designer.cs">
+      <DependentUpon>职级工资标准_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细.Designer.cs">
+      <DependentUpon>薪酬执行明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel2Code\薪酬执行明细_录入.Designer.cs">
+      <DependentUpon>薪酬执行明细_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构.Designer.cs">
+      <DependentUpon>薪酬结构.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴.Designer.cs">
+      <DependentUpon>薪酬结构_契约津贴.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴_发放明细.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴_发放明细.Designer.cs">
+      <DependentUpon>薪酬结构_契约津贴_发放明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_契约津贴_录入.Designer.cs">
+      <DependentUpon>薪酬结构_契约津贴_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_发放明细.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_发放明细.Designer.cs">
+      <DependentUpon>薪酬结构_工资借款_发放明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_发放明细_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_发放明细_录入.Designer.cs">
+      <DependentUpon>薪酬结构_工资借款_发放明细_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_发放明细.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_发放明细.Designer.cs">
+      <DependentUpon>薪酬结构_报账工资_发放明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_发放明细_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_发放明细_录入.Designer.cs">
+      <DependentUpon>薪酬结构_报账工资_发放明细_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资_录入.Designer.cs">
+      <DependentUpon>薪酬结构_报账工资_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_报账工资.Designer.cs">
+      <DependentUpon>薪酬结构_报账工资.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款.Designer.cs">
+      <DependentUpon>薪酬结构_工资借款.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_工资借款_录入.Designer.cs">
+      <DependentUpon>薪酬结构_工资借款_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_录入.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel4Code\薪酬结构_录入.Designer.cs">
+      <DependentUpon>薪酬结构_录入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\RoleLevel.cs" />
+    <Compile Include="PersistentClasses\LevelInfo.cs" />
+    <Compile Include="PersistentClasses\QueryLevel.cs" />
+    <Compile Include="PersistentClasses\QueryLevelInput.cs" />
+    <Compile Include="PersistentClasses\AuthorizeComputer.cs" />
+    <Compile Include="PersistentClasses\部门体系.cs" />
+    <Compile Include="PersistentClasses\部门体系.Designer.cs">
+      <DependentUpon>部门体系.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AuditingPayByDeptReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AuditingPayByDeptReport.Designer.cs">
+      <DependentUpon>AuditingPayByDeptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ZhongXinBankPrivateSalaryPayItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ZhongXinBankPrivateSalaryPayItems.Designer.cs">
+      <DependentUpon>ZhongXinBankPrivateSalaryPayItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryPayItems.Designer.cs">
+      <DependentUpon>PrivateSalaryPayItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryCalculateDeptReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryCalculateDeptReport.Designer.cs">
+      <DependentUpon>PrivateSalaryCalculateDeptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PersonalTaxReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PersonalTaxReport.Designer.cs">
+      <DependentUpon>PersonalTaxReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalaryCalculateReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SalaryCalculateReport.Designer.cs">
+      <DependentUpon>SalaryCalculateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RembursementSalaryVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RembursementSalaryVoucher.Designer.cs">
+      <DependentUpon>RembursementSalaryVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\WageLoanVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WageLoanVoucher.Designer.cs">
+      <DependentUpon>WageLoanVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustWay.cs" />
+    <Compile Include="UpStepType.cs" />
+    <Compile Include="SalaryBaseInfo.cs" />
+    <Compile Include="SalaryTreeNode.cs" />
+    <Compile Include="SalaryNodeType.cs" />
+    <Compile Include="SalaryNodeCollection.cs" />
+    <Compile Include="PersistentClasses\BaseData.cs" />
+    <Compile Include="PersistentClasses\EmployeeInfo.cs" />
+    <Compile Include="PersistentClasses\FilterString.cs" />
+    <Compile Include="PersistentClasses\Log.cs" />
+    <Compile Include="PersistentClasses\ModifyLog.cs" />
+    <Compile Include="PersistentClasses\NumberInfo.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\工资抽查记录.cs" />
+    <Compile Include="PersistentClasses\ORMDataModel1Code\工资抽查记录.Designer.cs">
+      <DependentUpon>工资抽查记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersistentClasses\PayRateInput.cs" />
+    <Compile Include="PersistentClasses\OtherMoney.cs" />
+    <Compile Include="PersistentClasses\EmpPayRate.cs" />
+    <Compile Include="PersistentClasses\PrivateSalary.cs" />
+    <Compile Include="PersistentClasses\SalaryAuditingResult.cs" />
+    <Compile Include="PersistentClasses\PersonPayRateInput.cs" />
+    <Compile Include="PersistentClasses\StepPayRate.cs" />
+    <Compile Include="PersistentClasses\SalaryGrade.cs" />
+    <Compile Include="PersistentClasses\PersonPayRate.cs" />
+    <Compile Include="PersistentClasses\SalaryResult.cs" />
+    <Compile Include="PersistentClasses\SalaryResultItem.cs" />
+    <Compile Include="PersistentClasses\RoleGrade.cs" />
+    <Compile Include="PersistentClasses\RolePayGroup.cs" />
+    <Compile Include="PersistentClasses\Roles.cs" />
+    <Compile Include="PersistentClasses\SalaryPlan.cs" />
+    <Compile Include="PersistentClasses\SalaryStep.cs" />
+    <Compile Include="PersistentClasses\TypeDefine.cs" />
+    <Compile Include="PersistentClasses\User.cs" />
+    <Compile Include="PersistentClasses\SalaryNode.cs" />
+    <Compile Include="PsHelper.cs" />
+    <Compile Include="Reports\PrivateSalaryCalculateReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PrivateSalaryCalculateReport.Designer.cs">
+      <DependentUpon>PrivateSalaryCalculateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalaryFaFangReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SalaryFaFangReport.Designer.cs">
+      <DependentUpon>SalaryFaFangReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RatePayingDeclarationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RatePayingDeclarationReport.Designer.cs">
+      <DependentUpon>RatePayingDeclarationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AuditingPayReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AuditingPayReport.Designer.cs">
+      <DependentUpon>AuditingPayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RiseType.cs" />
+    <Compile Include="SortOrderAttribute.cs" />
+    <Compile Include="Watcher.cs" />
+    <Compile Include="WatchMember.cs" />
+    <Compile Include="SemiannualType.cs" />
+    <Compile Include="职等.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="InPlaceEditors\" />
+    <Folder Include="UITypeEditors\" />
+    <Folder Include="WorkItems\" />
+    <Folder Include="Wrappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\PrivateSalaryCalculateReport.resx">
+      <DependentUpon>PrivateSalaryCalculateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ZhongXinBankPrivateSalaryPayItems.resx">
+      <DependentUpon>ZhongXinBankPrivateSalaryPayItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalaryFaFangReport.resx">
+      <DependentUpon>SalaryFaFangReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RatePayingDeclarationReport.resx">
+      <DependentUpon>RatePayingDeclarationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditingPayReport.resx">
+      <DependentUpon>AuditingPayReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AuditingPayByDeptReport.resx">
+      <DependentUpon>AuditingPayByDeptReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrivateSalaryPayItems.resx">
+      <DependentUpon>PrivateSalaryPayItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrivateSalaryCalculateDeptReport.resx">
+      <DependentUpon>PrivateSalaryCalculateDeptReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PersonalTaxReport.resx">
+      <DependentUpon>PersonalTaxReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalaryCalculateReport.resx">
+      <DependentUpon>SalaryCalculateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RembursementSalaryVoucher.resx">
+      <DependentUpon>RembursementSalaryVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WageLoanVoucher.resx">
+      <DependentUpon>WageLoanVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="jmail">
+      <Guid>{AED3A6B0-2171-11D2-B77C-0008C73ACA8F}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSources\Hwagain.SalaryCalculation.Components.PrivateSalary.datasource">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSources\Hwagain.SalaryCalculation.Components.SalaryResult.datasource">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

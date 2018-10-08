@@ -1,0 +1,18 @@
+管培生_综合能力评定  管培生_综合能力评定_录入
+	年份	int	Unchecked
+
+管培生_提资标准_录入
+	起薪	decimal(8, 2)	Checked
+	末薪	decimal(8, 2)	Checked
+	增幅1	decimal(8, 2)	Checked
+	增幅2	decimal(8, 2)	Checked
+	增幅3	decimal(8, 2)	Checked
+	增幅4	decimal(8, 2)	Checked
+	增幅5	decimal(8, 2)	Checked
+	增幅6	decimal(8, 2)	Checked
+	增幅7	decimal(8, 2)	Checked
+	增幅8	decimal(8, 2)	Checked
+	增幅9	decimal(8, 2)	Checked
+	增幅10	decimal(8, 2)	Checked
+	增幅11	decimal(8, 2)	Checked
+	增幅12	decimal(8, 2)	Checked

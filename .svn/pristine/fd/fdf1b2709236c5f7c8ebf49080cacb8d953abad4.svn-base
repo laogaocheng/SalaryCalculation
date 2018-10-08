@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+			<section name="Hwagain.SalaryCalculation.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+		</sectionGroup>
+	</configSections>
+	<appSettings>
+		<!--站点 Id -->
+		<add key="AppId" value="{7eb0e2ac-ffad-48d8-bc37-55b6fc666690}" />
+		<!--站点名称-->
+		<add key="SiteName" value="算薪专用模块" />
+		<!--版权信息-->
+		<add key="Copyright" value="华劲集团股份有限公司" />
+		<!---最近指示的月数-->
+		<add key="LatestMonths" value="6" />
+		<!---岗位工的起始编号，约定：管理人员的职等编号小于100 -->
+		<add key="MinFactoryHandGradeNumber" value="17" />
+		<!---界面样式-->
+		<add key="LookAndFeel" value="Summer 2008" />
+		<add key="ClientSettingsProvider.ServiceUri" value="" />
+	</appSettings>
+	<connectionStrings>
+		<!--<add name="ConnectionString" connectionString="Server=192.168.68.110;Database=专用算薪系统;uid=gongztb;pwd=server" providerName="System.Data.SqlClient" />-->
+		<add name="PSConnectionString" connectionString="eY4M/33+GbIrL5qOpV1gyg*rIvLhSt6llr+N5yQsM+CJ2LuUydpBBTNvkISIxgg8kU1E8l5FyHfy8Y/TSXZlu6R6BRhTFtay4FHCRxVvio7A0ieUoyA2u4fBXLv3yvEQHiS2uwvCTQp/MRIjU/PDyhUWEYpT+fvNVIj4R8ppdnXfxZR5Z9Ujiia9wFY59Por+k=" providerName="System.Data.OleDb" />
+	</connectionStrings>
+	<system.serviceModel>
+		<bindings />
+		<client />
+	</system.serviceModel>
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+	</startup>
+	<system.web>
+		<membership defaultProvider="ClientAuthenticationMembershipProvider">
+			<providers>
+				<add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+			</providers>
+		</membership>
+		<roleManager defaultProvider="ClientRoleProvider" enabled="true">
+			<providers>
+				<add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+			</providers>
+		</roleManager>
+	</system.web>
+</configuration>

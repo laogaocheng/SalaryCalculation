@@ -1,0 +1,635 @@
+﻿using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Drawing;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using System.Linq;
+
+using YiKang.RBACS.DataObjects;
+using DevExpress.XtraGrid.Views.Base;
+using Hwagain.Components;
+using Hwagain.SalaryCalculation.Components;
+using YiKang;
+using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.Utils;
+using DevExpress.XtraPrinting;
+using Aspose.Cells;
+using System.Data;
+
+
+namespace Hwagain.SalaryCalculation
+{
+    public partial class IndividualAdjustMonthlySalaryForm : XtraForm
+    {
+        string 副总经理以上职等 = "董事长,副董事长,总裁,副总裁,总经理,副总经理";
+
+        protected bool isCheck = false; //是否验证录入
+
+        string salary_plan = null;
+        string group = null;
+        string company_code = null;
+        int period;
+        JobGrade jobgrade;
+        List<MonthlySalaryInput> monthly_salary_list = new List<MonthlySalaryInput>();
+        List<MonthlySalaryInput> monthly_salary_list_opposite = new List<MonthlySalaryInput>();
+        List<EmployeeInfo> emp_list = new List<EmployeeInfo>();
+
+        bool showDifferent = false;
+
+        public IndividualAdjustMonthlySalaryForm(string salary_plan, string group, bool isCheck)
+            : this()
+        {
+            this.salary_plan = salary_plan;
+            this.group = group;
+            this.isCheck = isCheck;
+            //获取公司代码
+            company_code = PsHelper.GetCompanyCode(salary_plan);
+            //获取职等（默认自动为每个职等建立一个群组）
+            jobgrade = JobGrade.GetJobGrade(salary_plan, group);  
+            //获取期号
+            int lastestPeriodNonYear = MonthlySalary.GetLastestPeriodNonYear(salary_plan, group);
+            period = lastestPeriodNonYear == -1 ? 100001 : lastestPeriodNonYear + 1;
+
+            //通过薪等编号获取员工名单
+            emp_list = GetEmployeeList();
+            //设置标记, 标记有异动的人员
+            foreach(EmployeeInfo emp in emp_list)
+            {                
+                MonthlySalary effectiveMonthlySalary = MonthlySalary.GetEffective(emp.员工编号, DateTime.Today);
+                if (effectiveMonthlySalary == null)
+                {
+                    emp.标记 = true;
+                }
+            }
+        }
+
+        public IndividualAdjustMonthlySalaryForm()
+        {
+            // This call is required by the Windows Form Designer.
+            InitializeComponent();
+            // TODO: Add any initialization after the InitializeComponent call
+        }
+
+        #region CreateWaitDialog
+
+        WaitDialogForm dlg = null;
+        public void CreateWaitDialog()
+        {
+            CreateWaitDialog("正在启动...", "请稍等");
+        }
+        public void CreateWaitDialog(string caption, string title, Size size)
+        {
+            CloseWaitDialog();
+            dlg = new DevExpress.Utils.WaitDialogForm(caption, title, size);
+        }
+        public void CreateWaitDialog(string caption, string title)
+        {
+            CloseWaitDialog();
+            dlg = new DevExpress.Utils.WaitDialogForm(caption, title);
+        }
+        public void SetWaitDialogCaption(string fCaption)
+        {
+            if (dlg != null)
+                dlg.Caption = fCaption;
+        }
+        public void CloseWaitDialog()
+        {
+            if (dlg != null)
+                dlg.Close();
+        }
+        #endregion
+        
+        #region 创建编辑记录
+
+        List<MonthlySalaryInput> CreateEditingRows()
+        {
+            List<MonthlySalaryInput> list = new List<MonthlySalaryInput>(); 
+            //排序
+            emp_list = emp_list.OrderBy(a => a.部门序号).ThenBy(a => a.机构序号).ThenBy(a => a.机构名称).ThenBy(a => a.员工序号).ToList();
+            DateTime lastSalaryDate = SalaryResult.GetLastSalaryDate();
+            int order = 1;
+            foreach (EmployeeInfo emp in emp_list)
+            {
+                //2018-5-25 只创建没有月薪标准的人员
+                //将当前执行的标准带过来
+                MonthlySalary effectiveMonthlySalary = MonthlySalary.GetEffective(emp.员工编号, lastSalaryDate);
+                if (effectiveMonthlySalary != null) continue;
+
+                string lastSalaryGrade = SalaryResult.GetLastestSalaryGrade(emp.员工编号);
+                if (lastSalaryGrade == null) lastSalaryGrade = emp.职等;
+
+                //创建员工月薪记录
+                MonthlySalaryInput ms = MonthlySalaryInput.AddMonthlySalaryInput(emp.员工编号, period, isCheck, true);
+                ms.序号 = order;
+                ms.薪酬体系 = salary_plan;
+                ms.职等 = lastSalaryGrade;
+                ms.群组 = group;
+                //2018-4-23 新建的记录备注不要带过来
+                if (ms.录入人.Trim() == "")
+                {
+                    ms.开始执行日期 = DateTime.MinValue;
+                    ms.调整类型 = "";
+                    ms.备注 = "";
+                }
+                ms.Save();
+                list.Add(ms);
+                order++;
+            }
+
+            return list;
+        }
+
+        #endregion
+
+        #region UpdateRowNumber
+        //更新行号
+        void UpdateRowNumber()
+        {
+            int order = 1;
+            foreach (MonthlySalaryInput item in monthly_salary_list)
+            {
+                item.序号 = order;
+                item.Save();
+
+                MonthlySalaryInput item_opposite = item.另一人录入的记录;
+                if (item_opposite != null)
+                {
+                    item_opposite.序号 = order;
+                    item_opposite.Save();
+                }
+
+                order++;
+            }
+        }
+        #endregion
+
+        #region 获取员工名单
+
+        List<EmployeeInfo> GetEmployeeList()
+        {
+            //上月期间开始
+            DateTime date = SalaryResult.GetLastSalaryDate(group);
+
+            //2018-7-11 获取软件开发人员
+            List<EmployeeInfo> developer_list = new List<EmployeeInfo>();
+            List<string> names = Developer.GetDeveloperList();
+            foreach (string name in names)
+            {
+                EmployeeInfo emp = EmployeeInfo.GetEmployeeInfoByName(name);
+                if (emp != null) developer_list.Add(emp);
+            }
+
+            List<EmployeeInfo> emp_list = new List<EmployeeInfo>();
+            if (jobgrade != null)
+            {
+                if (salary_plan == "软件开发")
+                {
+                    emp_list = developer_list;
+                }
+                else
+                {
+                    //先将在职员工信息加载到内存
+                    EmployeeInfo.GetEmployeeList(company_code, group, true);
+                    //获取上月工资表中的人员名单
+                    emp_list = SalaryResult.GetEmployeeList(date.Year, date.Month, company_code, group, !check包括离职人员.Checked);
+
+                    //剔除软件开发人员
+                    foreach (EmployeeInfo emp in developer_list)
+                        emp_list.RemoveAll(a => a.员工编号 == emp.员工编号);
+                }
+            }
+            else
+            {
+                if (group == "管培生")
+                {
+                    //先将在职员工信息加载到内存
+                    EmployeeInfo.GetEmployeeList(company_code, null, true);
+                    //获取上月工资表中的人员名单
+                    emp_list = SalaryResult.GetEmployeeList(date.Year, date.Month, company_code, null, !check包括离职人员.Checked);
+                    //移除非管培生
+                    emp_list.RemoveAll(a => a.是管培生 == false);
+                }
+                else
+                {
+                    string[] grade_list = null;
+                    if (group == "副总经理以上") grade_list = 副总经理以上职等.Split(new char[] { ',' });
+                    if (grade_list != null)
+                    {
+                        for (int i = 0; i < grade_list.Length; i++)
+                        {
+                            //先将在职员工信息加载到内存
+                            EmployeeInfo.GetEmployeeList(company_code, group, true);
+                            //获取上月工资表中的人员名单
+                            List<EmployeeInfo> emps = SalaryResult.GetEmployeeList(date.Year, date.Month, company_code, grade_list[i], !check包括离职人员.Checked);
+                            emp_list.AddRange(emps);
+                        }
+                    }
+                }
+                //剔除软件开发人员
+                foreach (EmployeeInfo emp in developer_list)
+                    emp_list.RemoveAll(a => a.员工编号 == emp.员工编号);
+            }
+            //如果不是管培生组，剔除管培生
+            if (group != "管培生") emp_list.RemoveAll(a => a.是管培生);
+
+            return emp_list;
+        }
+
+        #endregion
+
+        #region 加载数据
+
+        protected void LoadData(bool compare)
+        {            
+            CreateWaitDialog("正在查询...", "请稍等");
+
+            monthly_salary_list = MonthlySalaryInput.GetEditingRows(this.salary_plan, group, period, isCheck);
+            //如果没有记录，自动创建
+            if (monthly_salary_list.Count == 0) monthly_salary_list = CreateEditingRows();
+
+            //如果比较
+            if (compare) monthly_salary_list_opposite = MonthlySalaryInput.GetEditingRows(this.salary_plan, group, period, !isCheck);
+            //设置备注
+            foreach (MonthlySalaryInput ms in monthly_salary_list)
+            {
+                if (jobgrade == null) ms.执行_月薪类型 = "特资";
+            }
+
+            SetWaitDialogCaption("正在加载...");
+
+            gridControl1.DataSource = monthly_salary_list;
+            gridControl1.Refresh();
+            advBandedGridView1.ExpandAllGroups();
+
+            CloseWaitDialog();
+
+            showDifferent = compare;            
+        }        
+
+        #endregion       
+      
+        private void btn导出_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = lbl标题.Text;
+
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string filename = saveFileDialog1.FileName;
+                XlsExportOptions options = new XlsExportOptions();
+                options.RawDataMode = false;
+                advBandedGridView1.ExportToXls(filename, options);
+
+                Aspose.Cells.Workbook workbook = new Aspose.Cells.Workbook(filename);
+                Worksheet sheet = workbook.Worksheets[0];
+                sheet.AutoFitColumns();
+                workbook.Save(filename);
+            }
+        }
+
+        private void AdjustMonthlySalaryForm_Load(object sender, EventArgs e)
+        {
+            lbl标题.Text = group + "【薪酬执行】明细表";
+            //初始化
+            repositoryItemRank.Items.Clear();
+            repositoryItemRank.Items.Add("");
+            if (jobgrade != null)
+            {
+                foreach (JobRank rank in jobgrade.职级表)
+                {
+                    repositoryItemRank.Items.Add(rank.名称);
+                }
+            }
+            else //不存在的职务等级，只读
+            {
+                repositoryItemRank.ReadOnly = true;
+                repositoryItemSalaryType.ReadOnly = true;
+            }
+
+            LoadData(false);
+        }
+
+        private void advBandedGridView1_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            if (advBandedGridView1.FocusedColumn.FieldName == "执行_月薪")
+            {
+                string t = (string)advBandedGridView1.GetRowCellValue(advBandedGridView1.FocusedRowHandle, advBandedGridView1.Columns["执行_月薪类型"]);
+                if (t != "特资" && t != "特调") e.Cancel = true;
+            }
+        }
+
+        private void btn保存提交_Click(object sender, EventArgs e)
+        {
+            bool isSameEditor = false;
+
+            showDifferent = true;
+            CreateWaitDialog("正在准备保存...", "请稍等");
+            try
+            {
+                //检查是否所有职等都录入完成
+                DateTime lastSalaryDate = SalaryResult.GetLastSalaryDate();
+                foreach (MonthlySalaryInput ms in monthly_salary_list)
+                {
+                    if (ms.执行_月薪 == 0)
+                    {
+                        MessageBox.Show("温馨提醒：发现有执行月薪为 0 的人员，请仔细检查确认");
+                        break;
+                    }
+                    
+                    if (ms.开始执行日期 != DateTime.MinValue && ms.开始执行日期 < lastSalaryDate)
+                    {
+                        MessageBox.Show("提交失败：开始执行日期不正确，不能小于 " + lastSalaryDate.ToString("yyyy年M月d日"));
+                        return;
+                    }
+                }
+                
+                //重新排序
+                monthly_salary_list = monthly_salary_list.OrderByDescending(a => a.执行_月薪).ToList();
+                int order = 1;
+                //保存执行日期、录入人、录入时间、调整类型
+                foreach (MonthlySalaryInput ms in monthly_salary_list)
+                {
+                    if (ms.另一人录入的记录 != null)
+                    {
+                        string editor = AccessController.CurrentUser.姓名;
+                        string editor_opposite = ms.另一人录入的记录.录入人.Trim();
+                        if (editor == editor_opposite && editor_opposite != "")
+                        {
+                            isSameEditor = true;
+                            break;
+                        }
+                    }
+
+                    ms.序号 = order++;
+                    ms.录入人 = AccessController.CurrentUser.姓名;
+                    ms.录入时间 = DateTime.Now;
+                    ms.Save();
+                }
+
+                if (isSameEditor)
+                {
+                    CloseWaitDialog();
+
+                    MessageBox.Show("提交失败：两次录入不能是同一个人");
+                    return;
+                }
+
+                foreach (MonthlySalaryInput ms in monthly_salary_list)
+                {
+                    //手动比较录入的内容
+                    ms.CompareInputContent();
+                }
+
+                SetWaitDialogCaption("正在比较双人录入是否一致...");
+                
+                //检查差异
+                bool all_same = true;
+                string error_fields = "";
+                foreach (MonthlySalaryInput ms in monthly_salary_list)
+                {
+                    if (!ms.另一人已录入 || ms.内容不同的字段.Count > 0)
+                    {
+                        foreach (ModifyField f in ms.内容不同的字段)
+                        {
+                            if (error_fields != "") error_fields += ",";
+                             error_fields += f.名称;
+                        }
+                        all_same = false;
+                        break;
+                    }
+                }
+                if (all_same)
+                {
+                    monthly_salary_list = monthly_salary_list.OrderByDescending(a => a.执行_月薪).ToList();
+                    int x = 1;
+                    //转成正式
+                    foreach (MonthlySalaryInput ms in monthly_salary_list)
+                    {
+                        ms.序号 = x++;
+
+                        if (ms.开始执行日期 != DateTime.MinValue && ms.执行_月薪 > 0)
+                        {
+                            ms.UpdateToFormalTable();                            
+                        }
+                    }
+                    MessageBox.Show("双人录入成功");
+                }
+                else
+                {
+                    //显示差异
+                    gridControl1.DataSource = monthly_salary_list;
+                    gridControl1.Refresh();  
+                    MessageBox.Show("提交失败：红色项目不一致，请重新核对修改。如果多次修改提交仍然有问题可能数据已经异常，请清除表中记录重录试试。" + error_fields, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                gridControl1.Focus();
+                this.Refresh();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            finally
+            {
+                CloseWaitDialog();
+            }
+        }
+
+        #region gridView1_CustomDrawCell
+
+        private void gridView1_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)
+        {
+            if (showDifferent == false) return;
+
+            e.Appearance.ForeColor = Color.Black;
+            e.Appearance.BackColor = Color.Transparent;
+
+            MonthlySalaryInput row = advBandedGridView1.GetRow(e.RowHandle) as MonthlySalaryInput;
+            if (row != null)
+            {
+                foreach (ModifyField field in row.内容不同的字段)
+                {
+                    if (field.名称 == e.Column.FieldName)
+                    {
+                        e.Appearance.ForeColor = Color.Yellow;
+                        e.Appearance.BackColor = Color.Red;
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region advBandedGridView1_CellValueChanged
+
+        private void advBandedGridView1_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        {
+            //如果评定职级发生改变
+            if (e.Column.FieldName == "评定_职级")
+            {
+                MonthlySalaryInput row = advBandedGridView1.GetRow(e.RowHandle) as MonthlySalaryInput;
+                if (row != null)
+                {
+                    RankSalaryStandard rss = RankSalaryStandard.GetEffectRankSalaryStandard(row.薪酬体系, row.职等, row.评定_职级, DateTime.Today);
+                    if (rss != null)
+                    {
+                        row.评定_月薪 = rss.月薪;
+                    }
+                    else
+                        row.评定_月薪 = 0;
+
+                    gridControl1.Refresh();
+                }
+            }
+            //如果执行职级发生改变
+            if (e.Column.FieldName == "执行_职级" || e.Column.FieldName == "执行_月薪类型")
+            {
+                MonthlySalaryInput row = advBandedGridView1.GetRow(e.RowHandle) as MonthlySalaryInput;
+                if (row != null && row.执行_月薪类型 == "常资")
+                {
+                    RankSalaryStandard rss = RankSalaryStandard.GetEffectRankSalaryStandard(row.薪酬体系, row.职等, row.执行_职级, DateTime.Today);
+                    if (rss != null)
+                    {
+                        row.执行_月薪 = rss.月薪;
+                    }
+                    else
+                        row.执行_月薪 = 0;
+
+                    gridControl1.Refresh();
+                }
+            }
+        }
+
+        #endregion
+
+        private void AdjustMonthlySalaryForm_Shown(object sender, EventArgs e)
+        {
+            if (this.Owner != null) this.Owner.Hide();
+        }
+
+        private void AdjustMonthlySalaryForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (this.Owner != null) this.Owner.Show();
+        }
+
+        private void btn返回目录_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn查漏_Click(object sender, EventArgs e)
+        {
+            emp_list = GetEmployeeList();
+            CreateEditingRows();
+            LoadData(false);
+        }
+
+        private void btn检查异动_Click(object sender, EventArgs e)
+        {
+            CreateWaitDialog("正在检查是否存在异动人员...", "请稍等");
+
+            //清理异动人员薪酬表
+            List<EmployeeInfo> list = MonthlySalary.ClearInvalidRecord();
+
+            CloseWaitDialog();
+
+            if (list.Count == 0)
+                MessageBox.Show("没有异动人员");
+            else
+                MessageBox.Show("有 " + list.Count + " 个异动人员, 他们的月薪执行记录已被清除，请重新录入");
+        }
+
+        private void btn删除_Click(object sender, EventArgs e)
+        {
+            ColumnView colView = (ColumnView)gridControl1.MainView;
+            if (colView != null)
+            {
+                if (MessageBox.Show("确实删除当前记录吗？", "删除提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, 0, false) == DialogResult.Yes)
+                {
+                    MonthlySalaryInput currentItem = (MonthlySalaryInput)colView.GetFocusedRow();
+                    monthly_salary_list.Remove(currentItem);
+                    MyHelper.WriteLog(LogType.信息, "删除员工月薪执行录入记录", currentItem.ToString<MonthlySalaryInput>());
+                    UpdateRowNumber();
+                    gridControl1.RefreshDataSource();
+
+                    currentItem.Delete();
+
+                    MessageBox.Show("删除成功。", "删除提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btn添加_Click(object sender, EventArgs e)
+        {            
+            EmployeePickerForm form = new EmployeePickerForm(emp_list);
+            form.OnSelected += OnEmployeeSelectd;
+            form.ShowDialog();
+        }
+
+        private void OnEmployeeSelectd(object sender, EmployeeInfo emp)
+        {
+            if (monthly_salary_list.Find(a => a.员工编号 == emp.员工编号) == null)
+            {
+                //创建员工月薪记录
+                MonthlySalaryInput item = MonthlySalaryInput.AddMonthlySalaryInput(emp.员工编号, period, isCheck, true);
+                item.序号 = advBandedGridView1.RowCount;
+                item.薪酬体系 = salary_plan;
+                item.职等 = emp.职等;
+                item.群组 = group;
+                //2018-4-23 调整类型和备注不要带过来
+                item.调整类型 = "";
+                item.备注 = "";
+                item.Save();
+
+                monthly_salary_list.Add(item);
+                UpdateRowNumber();
+                gridControl1.RefreshDataSource();
+                advBandedGridView1.FocusedRowHandle = advBandedGridView1.RowCount - 1;
+            }
+        }
+
+        private void advBandedGridView1_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            MonthlySalaryInput row = advBandedGridView1.GetRow(e.FocusedRowHandle) as MonthlySalaryInput;
+            //重置职等列表
+            if (jobgrade == null && row != null)
+            {
+                JobGrade currJobGrade = JobGrade.GetJobGrade(row.薪酬体系, row.职等);
+                if (currJobGrade != null)
+                {
+                    repositoryItemRank.ReadOnly = false;
+                    repositoryItemSalaryType.ReadOnly = false;
+
+                    repositoryItemRank.Items.Clear();
+                    repositoryItemRank.Items.Add("");
+
+                    foreach (JobRank rank in currJobGrade.职级表)
+                    {
+                        repositoryItemRank.Items.Add(rank.名称);
+                    }
+                }
+                else
+                {
+                    repositoryItemRank.ReadOnly = true;
+                    repositoryItemSalaryType.ReadOnly = true;
+
+                    repositoryItemRank.Items.Clear();
+                }
+            }
+        }
+
+        private void btn清除未生效记录_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("本次操作将删除未生效的记录，继续吗？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, 0, false) == DialogResult.Yes)
+            {
+                //清除旧的记录
+                MonthlySalaryInput.ClearMonthlySalaryInput(salary_plan, group, -1, isCheck);
+                emp_list = GetEmployeeList();
+                CreateEditingRows();
+                LoadData(false);
+            }            
+        }
+    }
+
+}
+
